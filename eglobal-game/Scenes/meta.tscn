@@ -1,3 +1,22 @@
-[gd_scene format=3 uid="uid://c3c5a3hk1wlef"]
+[gd_scene load_steps=2 format=3 uid="uid://bah7756i5nhvh"]
+
+[ext_resource type="Script" path="res://Scripts/Meta/meta_navigation.gd" id="1_kt351"]
 
 [node name="Node2D" type="Node2D"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kt351")
+
+[node name="start_btn" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 151.0
+offset_top = 550.0
+offset_right = 221.0
+offset_bottom = 581.0
+text = "Start"

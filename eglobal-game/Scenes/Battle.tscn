@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://rrqsffksewp6"]
+
+[ext_resource type="Texture2D" uid="uid://gfdqk80j8yoc" path="res://Content/BerserkArmor.png" id="1_45ie5"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_left = 90.0
+offset_top = 205.0
+offset_right = 282.0
+offset_bottom = 397.0
+texture = ExtResource("1_45ie5")
