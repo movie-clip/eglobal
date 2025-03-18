@@ -11,9 +11,15 @@ config_version=5
 [application]
 
 config/name="eglobal-game"
-run/main_scene="res://Scenes/Meta.tscn"
+run/main_scene="res://Scenes/Main.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Util="*res://Scripts/Util.gd"
+Global="*res://Scripts/Global.gd"
+SignalBus="*res://Scripts/SignalBus.gd"
 
 [display]
 

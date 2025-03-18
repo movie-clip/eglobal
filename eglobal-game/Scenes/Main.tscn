@@ -1,0 +1,43 @@
+[gd_scene load_steps=3 format=3 uid="uid://bby8df64tvyln"]
+
+[ext_resource type="Script" path="res://Scripts/GameController.gd" id="1_1sxgw"]
+[ext_resource type="Script" path="res://Scripts/Splash/SplashController.gd" id="2_fe3v0"]
+
+[node name="GameController" type="Node" node_paths=PackedStringArray("world_2d", "gui")]
+script = ExtResource("1_1sxgw")
+world_2d = NodePath("World_2d")
+gui = NodePath("GUI")
+
+[node name="World_2d" type="Node2D" parent="."]
+
+[node name="GUI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Splash" type="Control" parent="GUI"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_fe3v0")
+
+[node name="CenterContainer" type="CenterContainer" parent="GUI/Splash"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="GUI/Splash/CenterContainer"]
+layout_mode = 2
+
+[node name="start_btn" type="Button" parent="GUI/Splash/CenterContainer/PanelContainer"]
+layout_mode = 2
+text = "Skip"
