@@ -8,4 +8,4 @@ func _ready() -> void:
 
 
 func _on_StartBattle_pressed() -> void:
-	Global.game_controller.change_gui_scene("Battle", false, false)
+	Global.game_controller.change_gui_scene(Util.SCENES.BATTLE, true)
