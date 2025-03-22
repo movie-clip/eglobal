@@ -1,0 +1,784 @@
+[gd_scene load_steps=37 format=3 uid="uid://dxj68qfu7tivi"]
+
+[ext_resource type="Script" path="res://Scripts/Ui/Battle/BattleUiRoot.gd" id="1_q3g5q"]
+[ext_resource type="Texture2D" uid="uid://bvlpkuqdwh7mp" path="res://Content/ui_panel_bg.png" id="2_pswx1"]
+[ext_resource type="Texture2D" uid="uid://dl4h2klytb8cu" path="res://Content/ui_for_atlas.png" id="3_cvh5v"]
+[ext_resource type="Texture2D" uid="uid://c4ue6wr44dey5" path="res://Content/all_ui.png" id="4_bmtup"]
+[ext_resource type="Texture2D" uid="uid://ccqr1cqwuh5gg" path="res://Content/all_ui_icons.png" id="4_wpxwp"]
+[ext_resource type="Script" path="res://Scripts/Ui/Battle/AllStatsPanel.gd" id="5_skxg0"]
+[ext_resource type="Script" path="res://Scripts/Ui/Battle/BattleButton.gd" id="6_iouhy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bben5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5hd5e"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_43w0c"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m6lx2"]
+atlas = ExtResource("3_cvh5v")
+region = Rect2(15, 42, 30, 30)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wdvm7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yw5nl"]
+bg_color = Color(0.87451, 0.756863, 0.0196078, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jvra8"]
+atlas = ExtResource("4_wpxwp")
+region = Rect2(97, 100, 14, 13)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0dtle"]
+atlas = ExtResource("4_wpxwp")
+region = Rect2(55, 87, 33, 27)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rbjrl"]
+texture = SubResource("AtlasTexture_0dtle")
+texture_margin_left = 24.5352
+texture_margin_top = 12.9662
+texture_margin_right = 7.94121
+texture_margin_bottom = 13.1973
+region_rect = Rect2(0.16143, 0, 32.8386, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_odlit"]
+atlas = ExtResource("4_wpxwp")
+region = Rect2(19, 12, 20, 22)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4na8v"]
+texture = SubResource("AtlasTexture_odlit")
+texture_margin_left = 6.8402
+texture_margin_right = 6.865
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p0nsx"]
+atlas = ExtResource("4_wpxwp")
+region = Rect2(20, 41, 20, 22)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6st72"]
+texture = SubResource("AtlasTexture_p0nsx")
+texture_margin_right = 8.00917
+region_rect = Rect2(6.87257, 0, 13.1274, 22)
+modulate_color = Color(4.04298e-06, 0.961148, 0.369628, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o8l78"]
+atlas = ExtResource("4_bmtup")
+region = Rect2(8, 224, 23, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qn1np"]
+atlas = ExtResource("4_wpxwp")
+region = Rect2(20, 41, 20, 22)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2r5kl"]
+texture = SubResource("AtlasTexture_qn1np")
+texture_margin_right = 7.9329
+region_rect = Rect2(6.94884, 0, 13.0512, 22)
+modulate_color = Color(1, 0.235294, 0.141176, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c0eu0"]
+atlas = ExtResource("4_bmtup")
+region = Rect2(44, 225, 26, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_08msp"]
+atlas = ExtResource("4_wpxwp")
+region = Rect2(19, 12, 20, 22)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_iq0dd"]
+texture = SubResource("AtlasTexture_08msp")
+texture_margin_left = 7.07304
+texture_margin_right = 7.00369
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gv7aa"]
+atlas = ExtResource("4_bmtup")
+region = Rect2(84, 222, 12, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cvdyu"]
+atlas = ExtResource("4_wpxwp")
+region = Rect2(83, 48, 22, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4tmib"]
+atlas = ExtResource("4_wpxwp")
+region = Rect2(54, 9, 31, 30)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f1fbk"]
+texture = SubResource("AtlasTexture_4tmib")
+texture_margin_left = 4.26409
+texture_margin_top = 3.04578
+texture_margin_right = 3.85798
+texture_margin_bottom = 3.04578
+modulate_color = Color(1, 0.72549, 0.258824, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3txd4"]
+atlas = ExtResource("4_wpxwp")
+region = Rect2(54, 9, 31, 30)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hfmbb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yjh2l"]
+atlas = ExtResource("4_bmtup")
+region = Rect2(7, 28, 126, 22)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ta8gp"]
+texture = SubResource("AtlasTexture_yjh2l")
+modulate_color = Color(0.753589, 0.764059, 0.895898, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xb3lk"]
+atlas = ExtResource("4_bmtup")
+region = Rect2(7, 28, 126, 22)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_v0m8x"]
+texture = SubResource("AtlasTexture_xb3lk")
+modulate_color = Color(0.903307, 0.955346, 0.609172, 1)
+
+[node name="BattleUiRoot" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_q3g5q")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="LevelProgressPanel" type="TextureRect" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.5
+texture = ExtResource("2_pswx1")
+expand_mode = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/LevelProgressPanel"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -32.0
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="EmptyViewControl1" type="Control" parent="MarginContainer/VBoxContainer/LevelProgressPanel/HBoxContainer"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.23
+
+[node name="ExitPanel" type="Control" parent="MarginContainer/VBoxContainer/LevelProgressPanel/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_stretch_ratio = 0.63
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/LevelProgressPanel/HBoxContainer/ExitPanel"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+theme_override_styles/focus = SubResource("StyleBoxEmpty_bben5")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_5hd5e")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_43w0c")
+icon = SubResource("AtlasTexture_m6lx2")
+icon_alignment = 1
+expand_icon = true
+
+[node name="EmptyViewControl2" type="Control" parent="MarginContainer/VBoxContainer/LevelProgressPanel/HBoxContainer"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="LevelProgressBar" type="ProgressBar" parent="MarginContainer/VBoxContainer/LevelProgressPanel/HBoxContainer"]
+custom_minimum_size = Vector2(0, 14)
+layout_direction = 2
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+size_flags_stretch_ratio = 2.5
+theme_override_styles/background = SubResource("StyleBoxFlat_wdvm7")
+theme_override_styles/fill = SubResource("StyleBoxFlat_yw5nl")
+step = 1.0
+value = 30.0
+show_percentage = false
+
+[node name="TextureRect1" type="TextureRect" parent="MarginContainer/VBoxContainer/LevelProgressPanel/HBoxContainer/LevelProgressBar"]
+custom_minimum_size = Vector2(8, 8)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -5.0
+offset_top = -16.0
+offset_right = 27.0
+offset_bottom = 16.0
+grow_vertical = 2
+texture = SubResource("AtlasTexture_jvra8")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="TextureRect2" type="TextureRect" parent="MarginContainer/VBoxContainer/LevelProgressPanel/HBoxContainer/LevelProgressBar"]
+custom_minimum_size = Vector2(8, 8)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -16.0
+offset_top = -16.0
+offset_right = 16.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_jvra8")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="TextureRect3" type="TextureRect" parent="MarginContainer/VBoxContainer/LevelProgressPanel/HBoxContainer/LevelProgressBar"]
+custom_minimum_size = Vector2(8, 8)
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -28.0
+offset_top = -16.0
+offset_right = 4.0
+offset_bottom = 16.0
+grow_horizontal = 0
+grow_vertical = 2
+texture = SubResource("AtlasTexture_jvra8")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="EmptyViewControl3" type="Control" parent="MarginContainer/VBoxContainer/LevelProgressPanel/HBoxContainer"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="CurrencyStatPanel" type="Control" parent="MarginContainer/VBoxContainer/LevelProgressPanel/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.91
+
+[node name="Panel" type="Panel" parent="MarginContainer/VBoxContainer/LevelProgressPanel/HBoxContainer/CurrencyStatPanel"]
+clip_contents = true
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_rbjrl")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer/LevelProgressPanel/HBoxContainer/CurrencyStatPanel/Panel"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 25.0
+offset_top = -11.0
+offset_right = -7.0
+offset_bottom = 12.0
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "400"
+fit_content = true
+scroll_active = false
+text_direction = 2
+
+[node name="EmptyViewControl4" type="Control" parent="MarginContainer/VBoxContainer/LevelProgressPanel/HBoxContainer"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="EmptyViewControl" type="Control" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 3.62
+
+[node name="AllStatsPanel" type="TextureRect" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 450)
+layout_mode = 2
+size_flags_stretch_ratio = 3.5
+texture = ExtResource("2_pswx1")
+expand_mode = 1
+flip_v = true
+script = ExtResource("5_skxg0")
+
+[node name="AllStatsHBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/AllStatsPanel"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+
+[node name="EmptyViewControl1" type="Control" parent="MarginContainer/VBoxContainer/AllStatsPanel/AllStatsHBoxContainer"]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+size_flags_stretch_ratio = 0.35
+
+[node name="ExpStatPanel" type="Control" parent="MarginContainer/VBoxContainer/AllStatsPanel/AllStatsHBoxContainer"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+
+[node name="ProgressBar" type="ProgressBar" parent="MarginContainer/VBoxContainer/AllStatsPanel/AllStatsHBoxContainer/ExpStatPanel"]
+custom_minimum_size = Vector2(100, 28)
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 32.0
+offset_top = -14.0
+offset_bottom = 14.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/background = SubResource("StyleBoxTexture_4na8v")
+theme_override_styles/fill = SubResource("StyleBoxTexture_6st72")
+step = 1.0
+value = 75.0
+show_percentage = false
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/AllStatsPanel/AllStatsHBoxContainer/ExpStatPanel"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -5.0
+offset_top = -25.0
+offset_right = 43.0
+offset_bottom = 23.0
+grow_vertical = 2
+texture = SubResource("AtlasTexture_o8l78")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer/AllStatsPanel/AllStatsHBoxContainer/ExpStatPanel"]
+z_as_relative = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 24.0
+offset_top = -11.0
+offset_bottom = 12.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 5
+bbcode_enabled = true
+text = "[center][b]3333 / 3333"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+shortcut_keys_enabled = false
+deselect_on_focus_loss_enabled = false
+drag_and_drop_selection_enabled = false
+
+[node name="EmptyViewControl2" type="Control" parent="MarginContainer/VBoxContainer/AllStatsPanel/AllStatsHBoxContainer"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.2
+
+[node name="HealthStatPanel" type="Control" parent="MarginContainer/VBoxContainer/AllStatsPanel/AllStatsHBoxContainer"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+
+[node name="ProgressBar" type="ProgressBar" parent="MarginContainer/VBoxContainer/AllStatsPanel/AllStatsHBoxContainer/HealthStatPanel"]
+custom_minimum_size = Vector2(0, 26)
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -0.5
+offset_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/background = SubResource("StyleBoxTexture_4na8v")
+theme_override_styles/fill = SubResource("StyleBoxTexture_2r5kl")
+step = 1.0
+value = 40.0
+show_percentage = false
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/AllStatsPanel/AllStatsHBoxContainer/HealthStatPanel"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -15.0
+offset_top = -23.0
+offset_right = 33.0
+offset_bottom = 25.0
+grow_vertical = 2
+texture = SubResource("AtlasTexture_c0eu0")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer/AllStatsPanel/AllStatsHBoxContainer/HealthStatPanel"]
+z_as_relative = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -11.0
+offset_bottom = 12.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 5
+bbcode_enabled = true
+text = "[center][b]3333 / 3333"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+shortcut_keys_enabled = false
+deselect_on_focus_loss_enabled = false
+drag_and_drop_selection_enabled = false
+
+[node name="EmptyViewControl3" type="Control" parent="MarginContainer/VBoxContainer/AllStatsPanel/AllStatsHBoxContainer"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.2
+
+[node name="AttackStatPanel" type="Control" parent="MarginContainer/VBoxContainer/AllStatsPanel/AllStatsHBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+
+[node name="Panel" type="Panel" parent="MarginContainer/VBoxContainer/AllStatsPanel/AllStatsHBoxContainer/AttackStatPanel"]
+custom_minimum_size = Vector2(0, 26)
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_iq0dd")
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/AllStatsPanel/AllStatsHBoxContainer/AttackStatPanel"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -4.0
+offset_top = -16.0
+offset_right = 28.0
+offset_bottom = 16.0
+grow_vertical = 2
+texture = SubResource("AtlasTexture_gv7aa")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer/AllStatsPanel/AllStatsHBoxContainer/AttackStatPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 11.0
+offset_top = -11.0
+offset_right = -7.0
+offset_bottom = 12.0
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "123"
+fit_content = true
+scroll_active = false
+shortcut_keys_enabled = false
+text_direction = 2
+
+[node name="EmptyViewControl4" type="Control" parent="MarginContainer/VBoxContainer/AllStatsPanel/AllStatsHBoxContainer"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.2
+
+[node name="DefenceStatPanel" type="Control" parent="MarginContainer/VBoxContainer/AllStatsPanel/AllStatsHBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+
+[node name="Panel" type="Panel" parent="MarginContainer/VBoxContainer/AllStatsPanel/AllStatsHBoxContainer/DefenceStatPanel"]
+custom_minimum_size = Vector2(0, 26)
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_iq0dd")
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/AllStatsPanel/AllStatsHBoxContainer/DefenceStatPanel"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -4.0
+offset_top = -20.0
+offset_right = 36.0
+offset_bottom = 20.0
+grow_vertical = 2
+texture = SubResource("AtlasTexture_cvdyu")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer/AllStatsPanel/AllStatsHBoxContainer/DefenceStatPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 36.0
+offset_top = -11.0
+offset_right = -7.0
+offset_bottom = 12.0
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "347"
+fit_content = true
+scroll_active = false
+shortcut_keys_enabled = false
+text_direction = 2
+
+[node name="EmptyViewControl5" type="Control" parent="MarginContainer/VBoxContainer/AllStatsPanel/AllStatsHBoxContainer"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="InventoryCenterContainer" type="CenterContainer" parent="MarginContainer/VBoxContainer/AllStatsPanel"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -128.0
+offset_bottom = 128.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 5
+size_flags_vertical = 8
+
+[node name="Panel" type="Panel" parent="MarginContainer/VBoxContainer/AllStatsPanel/InventoryCenterContainer"]
+custom_minimum_size = Vector2(340, 280)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_f1fbk")
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer/VBoxContainer/AllStatsPanel/InventoryCenterContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+columns = 5
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/AllStatsPanel/InventoryCenterContainer/GridContainer"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 2
+texture = SubResource("AtlasTexture_3txd4")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="MarginContainer/VBoxContainer/AllStatsPanel/InventoryCenterContainer/GridContainer"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 2
+texture = SubResource("AtlasTexture_3txd4")
+expand_mode = 1
+
+[node name="TextureRect3" type="TextureRect" parent="MarginContainer/VBoxContainer/AllStatsPanel/InventoryCenterContainer/GridContainer"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 2
+texture = SubResource("AtlasTexture_3txd4")
+expand_mode = 1
+
+[node name="TextureRect4" type="TextureRect" parent="MarginContainer/VBoxContainer/AllStatsPanel/InventoryCenterContainer/GridContainer"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 2
+texture = SubResource("AtlasTexture_3txd4")
+expand_mode = 1
+
+[node name="TextureRect5" type="TextureRect" parent="MarginContainer/VBoxContainer/AllStatsPanel/InventoryCenterContainer/GridContainer"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 2
+texture = SubResource("AtlasTexture_3txd4")
+expand_mode = 1
+
+[node name="TextureRect6" type="TextureRect" parent="MarginContainer/VBoxContainer/AllStatsPanel/InventoryCenterContainer/GridContainer"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 2
+texture = SubResource("AtlasTexture_3txd4")
+expand_mode = 1
+
+[node name="TextureRect7" type="TextureRect" parent="MarginContainer/VBoxContainer/AllStatsPanel/InventoryCenterContainer/GridContainer"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 2
+texture = SubResource("AtlasTexture_3txd4")
+expand_mode = 1
+
+[node name="TextureRect8" type="TextureRect" parent="MarginContainer/VBoxContainer/AllStatsPanel/InventoryCenterContainer/GridContainer"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 2
+texture = SubResource("AtlasTexture_3txd4")
+expand_mode = 1
+
+[node name="TextureRect9" type="TextureRect" parent="MarginContainer/VBoxContainer/AllStatsPanel/InventoryCenterContainer/GridContainer"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 2
+texture = SubResource("AtlasTexture_3txd4")
+expand_mode = 1
+
+[node name="TextureRect10" type="TextureRect" parent="MarginContainer/VBoxContainer/AllStatsPanel/InventoryCenterContainer/GridContainer"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 2
+texture = SubResource("AtlasTexture_3txd4")
+expand_mode = 1
+
+[node name="TextureRect11" type="TextureRect" parent="MarginContainer/VBoxContainer/AllStatsPanel/InventoryCenterContainer/GridContainer"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 2
+texture = SubResource("AtlasTexture_3txd4")
+expand_mode = 1
+
+[node name="TextureRect12" type="TextureRect" parent="MarginContainer/VBoxContainer/AllStatsPanel/InventoryCenterContainer/GridContainer"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 2
+texture = SubResource("AtlasTexture_3txd4")
+expand_mode = 1
+
+[node name="TextureRect13" type="TextureRect" parent="MarginContainer/VBoxContainer/AllStatsPanel/InventoryCenterContainer/GridContainer"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 2
+texture = SubResource("AtlasTexture_3txd4")
+expand_mode = 1
+
+[node name="TextureRect14" type="TextureRect" parent="MarginContainer/VBoxContainer/AllStatsPanel/InventoryCenterContainer/GridContainer"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 2
+texture = SubResource("AtlasTexture_3txd4")
+expand_mode = 1
+
+[node name="TextureRect15" type="TextureRect" parent="MarginContainer/VBoxContainer/AllStatsPanel/InventoryCenterContainer/GridContainer"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 2
+texture = SubResource("AtlasTexture_3txd4")
+expand_mode = 1
+
+[node name="TextureRect16" type="TextureRect" parent="MarginContainer/VBoxContainer/AllStatsPanel/InventoryCenterContainer/GridContainer"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 2
+texture = SubResource("AtlasTexture_3txd4")
+expand_mode = 1
+
+[node name="TextureRect17" type="TextureRect" parent="MarginContainer/VBoxContainer/AllStatsPanel/InventoryCenterContainer/GridContainer"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 2
+texture = SubResource("AtlasTexture_3txd4")
+expand_mode = 1
+
+[node name="TextureRect18" type="TextureRect" parent="MarginContainer/VBoxContainer/AllStatsPanel/InventoryCenterContainer/GridContainer"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 2
+texture = SubResource("AtlasTexture_3txd4")
+expand_mode = 1
+
+[node name="TextureRect19" type="TextureRect" parent="MarginContainer/VBoxContainer/AllStatsPanel/InventoryCenterContainer/GridContainer"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 2
+texture = SubResource("AtlasTexture_3txd4")
+expand_mode = 1
+
+[node name="TextureRect20" type="TextureRect" parent="MarginContainer/VBoxContainer/AllStatsPanel/InventoryCenterContainer/GridContainer"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 2
+texture = SubResource("AtlasTexture_3txd4")
+expand_mode = 1
+
+[node name="BattleButton" type="Button" parent="MarginContainer/VBoxContainer/AllStatsPanel"]
+custom_minimum_size = Vector2(200, 40)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -65.0
+offset_right = 100.0
+offset_bottom = -25.0
+grow_horizontal = 2
+grow_vertical = 0
+pivot_offset = Vector2(100, 20)
+theme_override_colors/font_color = Color(0.512005, 0.470471, 0.51474, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_styles/focus = SubResource("StyleBoxEmpty_hfmbb")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ta8gp")
+theme_override_styles/normal = SubResource("StyleBoxTexture_v0m8x")
+text = "TO BATTLE!"
+icon_alignment = 1
+script = ExtResource("6_iouhy")

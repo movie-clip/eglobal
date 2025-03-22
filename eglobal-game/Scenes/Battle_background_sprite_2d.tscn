@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://le48oyxtpt5k"]
+
+[ext_resource type="Texture2D" uid="uid://ceiakx0cem0pv" path="res://Content/bg_kamenka.png" id="1_nblj8"]
+[ext_resource type="Script" path="res://Scripts/Ui/Battle/BattleBackgroundSprite2D.gd" id="2_mr45h"]
+
+[node name="BattleBackgroundSprite2D" type="Sprite2D"]
+texture = ExtResource("1_nblj8")
+script = ExtResource("2_mr45h")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(-1.50204e-05, 0.500022)
+scale = Vector2(224.9, 66.55)

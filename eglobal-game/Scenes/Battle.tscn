@@ -1,21 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://rrqsffksewp6"]
+[gd_scene load_steps=4 format=3 uid="uid://rrqsffksewp6"]
 
-[ext_resource type="Texture2D" uid="uid://gfdqk80j8yoc" path="res://Content/BerserkArmor.png" id="1_45ie5"]
+[ext_resource type="PackedScene" uid="uid://cr8oabwajqaqn" path="res://Scenes/PlayerPref.tscn" id="1_5nnb7"]
+[ext_resource type="PackedScene" uid="uid://dptuagfoukl5o" path="res://Scenes/Battle_background.tscn" id="2_lu3sm"]
+[ext_resource type="PackedScene" uid="uid://dxj68qfu7tivi" path="res://Scenes/BattleUiRoot.tscn" id="3_kc40o"]
 
 [node name="Node2D" type="Node2D"]
 
-[node name="Control" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="PlayerPref" parent="." instance=ExtResource("1_5nnb7")]
 
-[node name="TextureRect" type="TextureRect" parent="Control"]
-layout_mode = 0
-offset_left = 90.0
-offset_top = 205.0
-offset_right = 282.0
-offset_bottom = 397.0
-texture = ExtResource("1_45ie5")
+[node name="BattleBackground" parent="." instance=ExtResource("2_lu3sm")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="BattleUiRoot" parent="CanvasLayer" instance=ExtResource("3_kc40o")]
