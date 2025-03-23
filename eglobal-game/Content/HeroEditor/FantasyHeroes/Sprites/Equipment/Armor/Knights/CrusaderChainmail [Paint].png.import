@@ -1,0 +1,35 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://by7i42q764v4m"
+path.s3tc="res://.godot/imported/CrusaderChainmail [Paint].png-2614a32c0ddf4995ee6578036bbf2e6f.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+
+[deps]
+
+source_file="res://Content/HeroEditor/FantasyHeroes/Sprites/Equipment/Armor/Knights/CrusaderChainmail [Paint].png"
+dest_files=["res://.godot/imported/CrusaderChainmail [Paint].png-2614a32c0ddf4995ee6578036bbf2e6f.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=1.0
+compress/hdr_compression=1
+compress/normal_map=2
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=1
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=0
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=512
+detect_3d/compress_to=0

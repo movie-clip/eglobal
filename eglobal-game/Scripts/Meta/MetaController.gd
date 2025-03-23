@@ -1,6 +1,6 @@
-extends Node
+extends Control
 
-@onready var start_btn: Button = $start_btn
+@onready var start_btn: Button = $BottomArea/VBoxContainer/HBoxContainer/start_btn
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

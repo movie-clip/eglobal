@@ -1,7 +1,7 @@
 from telegram import Update
 from telegram.ext import ApplicationBuilder, CallbackQueryHandler, ContextTypes
 
-GAME_URL = "https://1bf4-185-198-50-145.ngrok-free.app"
+GAME_URL = "https://fa00-185-198-50-145.ngrok-free.app"
 GAME_SHORT_NAME = "eglobal_test_game"
 
 # Handler must be async in v20+

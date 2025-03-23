@@ -42,6 +42,7 @@ texture = ExtResource("3_vgmok")
 [node name="TransitionController" parent="GUILayer" instance=ExtResource("3_tag4f")]
 
 [node name="Debug" type="Control" parent="GUILayer"]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 77.0

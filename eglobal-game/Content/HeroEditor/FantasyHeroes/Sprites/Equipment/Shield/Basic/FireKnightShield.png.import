@@ -1,0 +1,35 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://duwbmes0v2upu"
+path.s3tc="res://.godot/imported/FireKnightShield.png-f9b6027a42d3304fb1da07d3d41062ab.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+
+[deps]
+
+source_file="res://Content/HeroEditor/FantasyHeroes/Sprites/Equipment/Shield/Basic/FireKnightShield.png"
+dest_files=["res://.godot/imported/FireKnightShield.png-f9b6027a42d3304fb1da07d3d41062ab.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=1.0
+compress/hdr_compression=1
+compress/normal_map=2
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=1
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=0
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=256
+detect_3d/compress_to=0

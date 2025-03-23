@@ -1,0 +1,35 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://c2ilhiuhi6hy4"
+path.s3tc="res://.godot/imported/BanditArmor.png-6c73ad9f09d09b0dcb7e680d02111baf.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+
+[deps]
+
+source_file="res://Content/HeroEditor/FantasyHeroes/Sprites/Equipment/Armor/Basic/BanditArmor.png"
+dest_files=["res://.godot/imported/BanditArmor.png-6c73ad9f09d09b0dcb7e680d02111baf.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=1.0
+compress/hdr_compression=1
+compress/normal_map=2
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=1
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=0
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=512
+detect_3d/compress_to=0

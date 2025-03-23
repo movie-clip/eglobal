@@ -1,0 +1,35 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://d1f4f8sqs7u2h"
+path.s3tc="res://.godot/imported/VikingLongBow.png-2248aaf6e8b0a43d8a7d0adf994bf3d2.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+
+[deps]
+
+source_file="res://Content/HeroEditor/FantasyHeroes/Sprites/Equipment/Bow/Vikings/VikingLongBow.png"
+dest_files=["res://.godot/imported/VikingLongBow.png-2248aaf6e8b0a43d8a7d0adf994bf3d2.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=1.0
+compress/hdr_compression=1
+compress/normal_map=2
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=1
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=0
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=512
+detect_3d/compress_to=0
