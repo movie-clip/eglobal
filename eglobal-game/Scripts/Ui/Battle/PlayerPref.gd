@@ -27,3 +27,4 @@ func  update_player_pos():
 	PlayerPos = self.transform.get_origin()
 	play("idle")
 	IsRuning = false
+	Events.OnPlayerMoveFinished.emit(PlayerPos)

@@ -5,8 +5,7 @@ var CurrentPlayerHp: int = 3000
 var CurrentPlayerLvl: int = 1
 var CurrentPlayerExp: int = 0
 var ExpForNextLvl: int = 100
-
-var levels = [0, 100, 200, 300, 400]
+var levels = [0, 100, 200, 300, 400, 600, 800, 1000, 10000]
 
 func OnBattlaButtonClickEvent() -> void:
 	Events.OnBattlaButtonClick.emit()
@@ -20,22 +19,20 @@ func OnPlayerHpChangeEvent(Value: int):
 
 func OnPlayerExpChangedEvent(Value: int):
 	CurrentPlayerExp += Value
-	Events.OnPlayerExpChanged.emit(Value)
-	var LevelUp: int = (CurrentPlayerExp + Value) / ExpForNextLvl
-	if (LevelUp >= 1):
-		CurrentPlayerExp = 0
-		CurrentPlayerLvl += LevelUp
-		OnPlayerLvlChangedEvent(LevelUp)
+	while (CurrentPlayerExp >= ExpForNextLvl):
+		CurrentPlayerExp -= ExpForNextLvl
+		CurrentPlayerLvl += 1
+		if (levels.size() > CurrentPlayerLvl):
+			ExpForNextLvl = levels[CurrentPlayerLvl]
+	OnPlayerExpForNextLvlChangedEvent(ExpForNextLvl)
+	OnPlayerLvlChangedEvent(CurrentPlayerLvl)
+	Events.OnPlayerExpChanged.emit(CurrentPlayerExp)
 
 func OnPlayerLvlChangedEvent(Value: int):
-	CurrentPlayerLvl += Value
 	Events.OnPlayerLvlChanged.emit(Value)
 
-func check_level_up():
-	while (CurrentPlayerLvl < levels.size() and CurrentPlayerExp >= levels[CurrentPlayerLvl]):
-		CurrentPlayerLvl += 1
-		print("Повышен уровень! Новый уровень: " + str(CurrentPlayerLvl))
-		CurrentPlayerExp -= levels[CurrentPlayerLvl - 1]
+func OnPlayerExpForNextLvlChangedEvent(Value: int):
+	Events.OnPlayerExpForNextLvlChanged.emit(Value)
 
 func GetMaxPlayerHp():
 	return MaxPlayerHp
