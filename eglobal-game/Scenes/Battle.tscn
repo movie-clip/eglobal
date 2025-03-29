@@ -1,93 +1,9 @@
 [gd_scene load_steps=2 format=3 uid="uid://7fk6htu0wgvs"]
 
-[sub_resource type="ImageTexture" id="ImageTexture_uv70s"]
+[ext_resource type="Script" path="res://Scripts/Battle/BattleController.gd" id="1_px7wn"]
 
-[node name="Control" type="Control"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="BattleController" type="Node2D" node_paths=PackedStringArray("spawn_point")]
+script = ExtResource("1_px7wn")
+spawn_point = NodePath("PlayerPosition")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
-layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = -27.0
-grow_horizontal = 2
-grow_vertical = 0
-
-[node name="Item" type="PanelContainer" parent="HBoxContainer"]
-custom_minimum_size = Vector2(100, 0)
-layout_direction = 1
-layout_mode = 2
-size_flags_horizontal = 0
-
-[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/Item"]
-layout_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="HBoxContainer/Item/HBoxContainer"]
-custom_minimum_size = Vector2(20, 0)
-layout_mode = 2
-texture = SubResource("ImageTexture_uv70s")
-
-[node name="ProgressBar" type="ProgressBar" parent="HBoxContainer/Item/HBoxContainer"]
-custom_minimum_size = Vector2(80, 0)
-layout_mode = 2
-
-[node name="Item2" type="PanelContainer" parent="HBoxContainer"]
-custom_minimum_size = Vector2(100, 0)
-layout_direction = 1
-layout_mode = 2
-size_flags_horizontal = 0
-
-[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/Item2"]
-layout_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="HBoxContainer/Item2/HBoxContainer"]
-custom_minimum_size = Vector2(20, 0)
-layout_mode = 2
-texture = SubResource("ImageTexture_uv70s")
-
-[node name="ProgressBar" type="ProgressBar" parent="HBoxContainer/Item2/HBoxContainer"]
-custom_minimum_size = Vector2(80, 0)
-layout_mode = 2
-
-[node name="Item3" type="PanelContainer" parent="HBoxContainer"]
-custom_minimum_size = Vector2(100, 0)
-layout_direction = 1
-layout_mode = 2
-size_flags_horizontal = 0
-
-[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/Item3"]
-layout_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="HBoxContainer/Item3/HBoxContainer"]
-custom_minimum_size = Vector2(20, 0)
-layout_mode = 2
-texture = SubResource("ImageTexture_uv70s")
-
-[node name="ProgressBar" type="ProgressBar" parent="HBoxContainer/Item3/HBoxContainer"]
-custom_minimum_size = Vector2(80, 0)
-layout_mode = 2
-
-[node name="Item4" type="PanelContainer" parent="HBoxContainer"]
-custom_minimum_size = Vector2(100, 0)
-layout_direction = 1
-layout_mode = 2
-size_flags_horizontal = 0
-
-[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/Item4"]
-layout_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="HBoxContainer/Item4/HBoxContainer"]
-custom_minimum_size = Vector2(20, 0)
-layout_mode = 2
-texture = SubResource("ImageTexture_uv70s")
-
-[node name="ProgressBar" type="ProgressBar" parent="HBoxContainer/Item4/HBoxContainer"]
-custom_minimum_size = Vector2(80, 0)
-layout_mode = 2
+[node name="PlayerPosition" type="Node2D" parent="."]

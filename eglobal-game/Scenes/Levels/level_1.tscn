@@ -1,0 +1,38 @@
+[gd_scene load_steps=2 format=3 uid="uid://cx2c47773mw32"]
+
+[ext_resource type="Script" path="res://Scripts/Levels/LevelSceneController.gd" id="1_2ns4j"]
+
+[node name="Level1" type="Node2D"]
+script = ExtResource("1_2ns4j")
+
+[node name="Lanes" type="Node2D" parent="."]
+
+[node name="Lane0" type="ColorRect" parent="Lanes"]
+offset_top = 120.0
+offset_right = 360.0
+offset_bottom = 160.0
+color = Color(1, 1, 1, 0.0823529)
+
+[node name="EnemySpawnerMarker" type="Marker2D" parent="Lanes/Lane0"]
+position = Vector2(341, 22)
+
+[node name="Lane1" type="ColorRect" parent="Lanes"]
+offset_top = 164.0
+offset_right = 360.0
+offset_bottom = 204.0
+color = Color(1, 1, 1, 0.0823529)
+
+[node name="EnemySpawnerMarker" type="Marker2D" parent="Lanes/Lane1"]
+position = Vector2(341, 22)
+
+[node name="Lane2" type="ColorRect" parent="Lanes"]
+offset_top = 208.0
+offset_right = 360.0
+offset_bottom = 248.0
+color = Color(1, 1, 1, 0.0823529)
+
+[node name="EnemySpawnerMarker" type="Marker2D" parent="Lanes/Lane2"]
+position = Vector2(341, 19)
+
+[node name="PlayerSpawn" type="Marker2D" parent="."]
+position = Vector2(28, 186)

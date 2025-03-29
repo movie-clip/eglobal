@@ -1,11 +1,23 @@
 extends Control
+class_name MetaController
 
-@onready var start_btn: Button = $BottomArea/VBoxContainer/HBoxContainer/start_btn
+@onready var inventory: Inventory = $Inventory
+@onready var inventory_ui: InventoryUI = inventory.get_node("InventoryUI")
+@onready var add_button: Button = $Button
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	start_btn.connect("pressed", Callable(self, "_on_StartBattle_pressed"))
+	print("Ready")
+	add_button.pressed.connect(_on_start_btn_pressed)
 
-
-func _on_StartBattle_pressed() -> void:
-	Global.game_controller.change_gui_scene(Util.SCENES.BATTLE, true)
+func _on_start_btn_pressed() -> void:
+	print("Button Clicked!")
+	var items = [
+		preload("res://Authoring/Inventory/Items/shield_item.tres"),
+		preload("res://Authoring/Inventory/Items/sword_item.tres")
+	]
+	var item = items[randi() % items.size()]
+	inventory.place_item(item)
+	inventory_ui.updateView()
+	
+	
+	

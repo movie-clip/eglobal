@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="BattleLevelData" load_steps=4 format=3 uid="uid://ctgkfptyfluim"]
+
+[ext_resource type="Resource" uid="uid://c5rb5v50t65h0" path="res://Authoring/Levels/GoblinSpawn.tres" id="1_bomhc"]
+[ext_resource type="Script" path="res://Scripts/Battle/BattleLevelData.gd" id="1_kk1bl"]
+[ext_resource type="Resource" uid="uid://by2psuucyr54c" path="res://Authoring/Levels/OrcSpawn.tres" id="2_g4ts2"]
+
+[resource]
+script = ExtResource("1_kk1bl")
+enemy_spawns = [ExtResource("1_bomhc"), ExtResource("2_g4ts2")]

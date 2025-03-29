@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="EnemyData" load_steps=3 format=3 uid="uid://vfswb3br8gf5"]
+
+[ext_resource type="Script" path="res://Scripts/Battle/Enemy/Data/EnemyData.gd" id="1_wsso7"]
+[ext_resource type="Texture2D" uid="uid://gfdqk80j8yoc" path="res://Content/BerserkArmor.png" id="2_ajp1h"]
+
+[resource]
+script = ExtResource("1_wsso7")
+name = "orc"
+health = 100
+attack_power = 10
+fire_rate = 1.0
+attack_range = 30.0
+movement_speed = 50.0
+texture = ExtResource("2_ajp1h")

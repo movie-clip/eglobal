@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="InventoryShape" load_steps=2 format=3 uid="uid://dqjfidea18k0u"]
+
+[ext_resource type="Script" path="res://Scripts/Inventory/Controllers/InventoryShape.gd" id="1_s8vhr"]
+
+[resource]
+script = ExtResource("1_s8vhr")
+width = 1
+height = 3

@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="eglobal-game"
-run/main_scene="res://Scenes/Main.tscn"
+run/main_scene="res://Scenes/Battle/battle_level.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -26,6 +26,7 @@ SignalBus="*res://Scripts/SignalBus.gd"
 window/size/viewport_width=360
 window/size/viewport_height=640
 window/handheld/orientation=1
+window/vsync/vsync_mode=0
 
 [editor_plugins]
 

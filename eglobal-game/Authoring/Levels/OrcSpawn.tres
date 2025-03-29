@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="EnemySpawnData" load_steps=3 format=3 uid="uid://by2psuucyr54c"]
+
+[ext_resource type="Resource" uid="uid://vfswb3br8gf5" path="res://Authoring/Enemies/EnemyOrc.tres" id="1_5c3f5"]
+[ext_resource type="Script" path="res://Scripts/Battle/Enemy/Data/EnemySpawnData.gd" id="1_crmvy"]
+
+[resource]
+script = ExtResource("1_crmvy")
+enemy = ExtResource("1_5c3f5")
+lane = 1

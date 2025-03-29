@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://cd7lr7njlis5l"]
+
+[ext_resource type="Texture2D" uid="uid://c5wosvryy0p31" path="res://Content/Sprites/inventorySlot.png" id="1_pwh8b"]
+
+[node name="InventorySlotUI_1x2" type="Panel"]
+offset_right = 20.0
+offset_bottom = 41.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_pwh8b")
+centered = false
+vframes = 2
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(0, 21)
+texture = ExtResource("1_pwh8b")
+centered = false
+vframes = 2

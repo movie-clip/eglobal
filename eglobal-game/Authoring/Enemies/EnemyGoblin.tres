@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="EnemyData" load_steps=3 format=3 uid="uid://6bcffrgrin1k"]
+
+[ext_resource type="Script" path="res://Scripts/Battle/Enemy/Data/EnemyData.gd" id="1_wtpfv"]
+[ext_resource type="Texture2D" uid="uid://cixf0sdnygy4g" path="res://Content/ArielDress [Paint].png" id="2_1o1y4"]
+
+[resource]
+script = ExtResource("1_wtpfv")
+name = "goblin"
+health = 50
+attack_power = 5
+fire_rate = 2.0
+attack_range = 60.0
+movement_speed = 80.0
+texture = ExtResource("2_1o1y4")

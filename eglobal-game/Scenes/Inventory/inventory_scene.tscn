@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://dgg1ntx01ontc"]
+
+[ext_resource type="Script" path="res://Scripts/Inventory/Controllers/Inventory.gd" id="1_kcioa"]
+[ext_resource type="Resource" uid="uid://c7riwxupd3gfa" path="res://Authoring/Inventory/InventoryData.tres" id="2_xh4tl"]
+[ext_resource type="PackedScene" uid="uid://bwabjqgnwqwoc" path="res://Scenes/Inventory/inventory_ui.tscn" id="3_svffh"]
+
+[node name="Inventory" type="Node" node_paths=PackedStringArray("ui")]
+script = ExtResource("1_kcioa")
+data = ExtResource("2_xh4tl")
+ui = NodePath("InventoryUI")
+
+[node name="InventoryUI" parent="." instance=ExtResource("3_svffh")]
+anchors_preset = 14
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -170.0
+offset_bottom = 230.0
