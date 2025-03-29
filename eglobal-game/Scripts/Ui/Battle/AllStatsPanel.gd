@@ -1,5 +1,5 @@
 extends TextureRect
-@onready var BattleButton = $BattleButton
+@onready var BattleButton = $"../TextureRect/BattleButton"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
