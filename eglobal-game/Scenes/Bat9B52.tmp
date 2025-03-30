@@ -1,0 +1,88 @@
+[gd_scene load_steps=13 format=3 uid="uid://bi134hvlepmwt"]
+
+[ext_resource type="PackedScene" uid="uid://dxj68qfu7tivi" path="res://Scenes/battle_ui.tscn" id="1_sfp4e"]
+[ext_resource type="PackedScene" uid="uid://dptuagfoukl5o" path="res://Scenes/Battle_bg.tscn" id="2_avlyu"]
+[ext_resource type="Script" path="res://Scripts/battle_bg_scroll.gd" id="2_dfhkf"]
+[ext_resource type="Script" path="res://Scripts/player_pref.gd" id="2_mxwmu"]
+[ext_resource type="Texture2D" uid="uid://crml4xvwgam4x" path="res://Content/Enemy/Soldier.png" id="4_f5cqn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_huwbe"]
+atlas = ExtResource("4_f5cqn")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_klc05"]
+atlas = ExtResource("4_f5cqn")
+region = Rect2(100, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2fvg5"]
+atlas = ExtResource("4_f5cqn")
+region = Rect2(200, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ct2xi"]
+atlas = ExtResource("4_f5cqn")
+region = Rect2(300, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3oj2l"]
+atlas = ExtResource("4_f5cqn")
+region = Rect2(400, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dc1c4"]
+atlas = ExtResource("4_f5cqn")
+region = Rect2(500, 0, 100, 100)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_isvye"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_huwbe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_klc05")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2fvg5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ct2xi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3oj2l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dc1c4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="PlayerPref" type="AnimatedSprite2D" parent="."]
+z_index = 1
+texture_filter = 1
+position = Vector2(140, 741)
+scale = Vector2(7, 7)
+sprite_frames = SubResource("SpriteFrames_isvye")
+frame = 3
+frame_progress = 0.633055
+script = ExtResource("2_mxwmu")
+
+[node name="Camera2D" type="Camera2D" parent="PlayerPref"]
+position = Vector2(-20.4286, -89.2857)
+scale = Vector2(0.142857, 0.142857)
+anchor_mode = 0
+limit_smoothed = true
+position_smoothing_enabled = true
+position_smoothing_speed = 5.82
+
+[node name="Node2" type="Node" parent="."]
+script = ExtResource("2_dfhkf")
+
+[node name="Node2D" parent="Node2" instance=ExtResource("2_avlyu")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Node" type="Node" parent="CanvasLayer"]
+
+[node name="BattleuiRoot" parent="CanvasLayer/Node" instance=ExtResource("1_sfp4e")]
