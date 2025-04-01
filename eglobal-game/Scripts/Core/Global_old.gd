@@ -1,6 +1,5 @@
-class_name PlayerModel
+extends Node
 
-var name: String
 var max_hp: int = 3000
 var current_hp: int = 3000
 var current_level: int = 1

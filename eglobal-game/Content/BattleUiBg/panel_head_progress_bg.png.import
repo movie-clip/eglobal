@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cvb4bslapob57"
-path="res://.godot/imported/inventory_head_bg.png-699c6d46a2ab05596733e6e4464353fe.ctex"
+path="res://.godot/imported/panel_head_progress_bg.png-a15d4fd082b55fb9f5e753a22f466879.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Content/BattleUiBg/inventory_head_bg.png"
-dest_files=["res://.godot/imported/inventory_head_bg.png-699c6d46a2ab05596733e6e4464353fe.ctex"]
+source_file="res://Content/BattleUiBg/panel_head_progress_bg.png"
+dest_files=["res://.godot/imported/panel_head_progress_bg.png-a15d4fd082b55fb9f5e753a22f466879.ctex"]
 
 [params]
 
