@@ -26,6 +26,7 @@ SignalBus="*res://Scripts/SignalBus.gd"
 window/size/viewport_width=360
 window/size/viewport_height=640
 window/stretch/mode="canvas_items"
+window/stretch/aspect="keep_width"
 window/handheld/orientation=1
 window/vsync/vsync_mode=0
 

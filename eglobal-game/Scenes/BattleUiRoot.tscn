@@ -110,7 +110,6 @@ region = Rect2(5, 4, 585, 239)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_v0m8x"]
 texture = SubResource("AtlasTexture_xb3lk")
-modulate_color = Color(0.903307, 0.955346, 0.609172, 1)
 
 [node name="BattleUiRoot" type="Control"]
 custom_minimum_size = Vector2(360, 640)
@@ -893,7 +892,7 @@ offset_right = 67.0
 offset_bottom = -10.0
 grow_horizontal = 2
 grow_vertical = 0
-pivot_offset = Vector2(100, 20)
+pivot_offset = Vector2(67, 25)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 5
 theme_override_font_sizes/font_size = 20

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://srb2fp8a7a6p"
-path="res://.godot/imported/bubble_bg_flag.png-2285d70a077c07d88b4d5da6d745c537.ctex"
+uid="uid://crmt2f7fkwqy"
+path="res://.godot/imported/bubble_bg_2.png-f045264cbcbc2bd79c6242bae7314718.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Content/UiSprites/BattleUi/BattleUiBg/bubble_bg_flag.png"
-dest_files=["res://.godot/imported/bubble_bg_flag.png-2285d70a077c07d88b4d5da6d745c537.ctex"]
+source_file="res://Content/UiSprites/BattleUi/BattleUiBg/bubble_bg_2.png"
+dest_files=["res://.godot/imported/bubble_bg_2.png-f045264cbcbc2bd79c6242bae7314718.ctex"]
 
 [params]
 
