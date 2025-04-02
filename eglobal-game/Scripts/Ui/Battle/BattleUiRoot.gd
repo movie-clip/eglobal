@@ -1,7 +1,7 @@
 extends Control
 
 @onready var BattleButton = $MarginContainer/VBoxContainer/TextureRect/BattleButton
-@onready var LevelProgressBar: ProgressBar = $MarginContainer/VBoxContainer/LevelProgressPanel/HBoxContainer/LevelProgressBar
+@onready var LevelProgressBar: TextureProgressBar = $MarginContainer/VBoxContainer/LevelProgressPanel/HBoxContainer/Control/LevelProgressPanel/TextureProgressBar
 @onready var PlayerHpPanelText: RichTextLabel = $MarginContainer/VBoxContainer/AllStatsPanel/AllStatsHBoxContainer/HealthStatPanel/RichTextLabel
 @onready var PlayerHpProgressBar: TextureProgressBar = $MarginContainer/VBoxContainer/AllStatsPanel/AllStatsHBoxContainer/HealthStatPanel/TextureProgressBar
 @onready var PlayerHpTexture: TextureRect = $MarginContainer/VBoxContainer/AllStatsPanel/AllStatsHBoxContainer/HealthStatPanel/TextureRect

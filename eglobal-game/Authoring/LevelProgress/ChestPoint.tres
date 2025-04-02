@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="ProgressPointData" load_steps=6 format=3 uid="uid://tao2njprisrp"]
+
+[ext_resource type="Script" path="res://Scripts/Ui/Battle/Data/ProgressPointData.gd" id="1_dv48c"]
+[ext_resource type="Texture2D" uid="uid://cieqdlrrh0mi0" path="res://Content/atlases/ui_atlas.png" id="1_vutip"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8etoi"]
+atlas = ExtResource("1_vutip")
+region = Rect2(76, 480, 62, 89)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bi3bi"]
+atlas = ExtResource("1_vutip")
+region = Rect2(869, 521, 58, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cu8y1"]
+atlas = ExtResource("1_vutip")
+region = Rect2(337, 400, 74, 79)
+
+[resource]
+script = ExtResource("1_dv48c")
+ProgressPointLevel = "12"
+FlagTextureRect = SubResource("AtlasTexture_8etoi")
+RoundTextureRect = SubResource("AtlasTexture_cu8y1")
+PointTextureRect = SubResource("AtlasTexture_bi3bi")

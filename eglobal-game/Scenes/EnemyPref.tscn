@@ -1,6 +1,6 @@
 [gd_scene load_steps=30 format=3 uid="uid://brpmuj64l04v"]
 
-[ext_resource type="Texture2D" uid="uid://cckr5l6upi8js" path="res://Content/Enemy/Orc.png" id="1_bh452"]
+[ext_resource type="Texture2D" uid="uid://cckr5l6upi8js" path="res://Content/atlases/Enemy/Orc.png" id="1_bh452"]
 [ext_resource type="Script" path="res://Scripts/EnemyPref.gd" id="2_c7vmc"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_52my3"]

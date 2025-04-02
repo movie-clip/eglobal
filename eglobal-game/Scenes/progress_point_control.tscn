@@ -1,0 +1,92 @@
+[gd_scene load_steps=6 format=3 uid="uid://b5jmg6p84rtc0"]
+
+[ext_resource type="Script" path="res://Scripts/Ui/Battle/ProgressPointControl.gd" id="1_wt116"]
+[ext_resource type="Texture2D" uid="uid://cieqdlrrh0mi0" path="res://Content/atlases/ui_atlas.png" id="2_66ota"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ihucy"]
+atlas = ExtResource("2_66ota")
+region = Rect2(148, 480, 62, 89)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6oclp"]
+atlas = ExtResource("2_66ota")
+region = Rect2(337, 489, 70, 74)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vhmjp"]
+atlas = ExtResource("2_66ota")
+region = Rect2(501, 516, 62, 64)
+
+[node name="ProgressPointControl" type="Control"]
+custom_minimum_size = Vector2(18, 32)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 18.0
+offset_bottom = 32.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_wt116")
+
+[node name="FlagTextureRect" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(14, 20)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -7.0
+offset_top = -20.0
+offset_right = 7.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = SubResource("AtlasTexture_ihucy")
+expand_mode = 1
+
+[node name="RoundTextureRect" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(18, 18)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -9.0
+offset_right = 9.0
+offset_bottom = 18.0
+grow_horizontal = 2
+texture = SubResource("AtlasTexture_6oclp")
+expand_mode = 1
+
+[node name="PointTextureRect" type="TextureRect" parent="RoundTextureRect"]
+custom_minimum_size = Vector2(12, 12)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -6.0
+offset_top = -6.0
+offset_right = 6.0
+offset_bottom = 6.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_vhmjp")
+expand_mode = 1
+
+[node name="PointRichTextLabel" type="RichTextLabel" parent="."]
+custom_minimum_size = Vector2(12, 12)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -6.0
+offset_top = -16.0
+offset_right = 6.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/normal_font_size = 10
+bbcode_enabled = true
+text = "[center]33"
+scroll_active = false
+autowrap_mode = 0

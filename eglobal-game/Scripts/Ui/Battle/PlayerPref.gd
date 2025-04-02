@@ -5,7 +5,7 @@ var IsRuning: bool
 var RunTimer: Timer
 
 func _ready() -> void:
-	Events.OnBattlaButtonClick.connect(on_click)
+	#Events.OnBattlaButtonClick.connect(on_click)
 	update_player_pos()
 
 func _process(delta: float) -> void:
@@ -27,4 +27,4 @@ func  update_player_pos():
 	PlayerPos = self.transform.get_origin()
 	play("idle")
 	IsRuning = false
-	Events.OnPlayerMoveFinished.emit(PlayerPos)
+	#Events.OnPlayerMoveFinished.emit(PlayerPos)

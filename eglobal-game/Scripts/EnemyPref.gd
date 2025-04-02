@@ -5,7 +5,7 @@ var IsRuning: bool
 
 func _ready() -> void:
 	play("idle")
-	Events.OnPlayerMoveFinished.connect(move_to_player)
+	#Events.OnPlayerMoveFinished.connect(move_to_player)
 
 func _process(delta: float) -> void:
 	pass

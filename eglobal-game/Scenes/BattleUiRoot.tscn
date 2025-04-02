@@ -1,20 +1,19 @@
-[gd_scene load_steps=45 format=3 uid="uid://dxj68qfu7tivi"]
+[gd_scene load_steps=41 format=3 uid="uid://dxj68qfu7tivi"]
 
 [ext_resource type="Script" path="res://Scripts/Ui/Battle/BattleUiRoot.gd" id="1_q3g5q"]
-[ext_resource type="Texture2D" uid="uid://ontpj8xlcqua" path="res://Content/BattleUiBg/panel_head_bg.png" id="2_elen3"]
-[ext_resource type="Texture2D" uid="uid://cvb4bslapob57" path="res://Content/BattleUiBg/panel_head_progress_bg.png" id="4_uo3tk"]
-[ext_resource type="Texture2D" uid="uid://dno543ass0lkt" path="res://Content/bg.png" id="5_6au8l"]
-[ext_resource type="Script" path="res://Scripts/Ui/Battle/ProgressPointControl.gd" id="5_eesph"]
+[ext_resource type="Texture2D" uid="uid://ontpj8xlcqua" path="res://Content/UiSprites/BattleUi/BattleUiBg/panel_head_bg.png" id="2_elen3"]
+[ext_resource type="Texture2D" uid="uid://cvb4bslapob57" path="res://Content/UiSprites/BattleUi/BattleUiBg/panel_head_progress_bg.png" id="4_uo3tk"]
+[ext_resource type="Texture2D" uid="uid://dno543ass0lkt" path="res://Content/UiSprites/BattleUi/BattleUiBg/panel_stats_bg.png" id="5_6au8l"]
+[ext_resource type="Script" path="res://Scripts/Ui/Battle/LevelProgressPanel.gd" id="5_cjwqj"]
 [ext_resource type="Script" path="res://Scripts/Ui/Battle/AllStatsPanel.gd" id="5_skxg0"]
 [ext_resource type="Script" path="res://Scripts/Ui/Battle/BattleButton.gd" id="6_iouhy"]
-[ext_resource type="Texture2D" uid="uid://ccn23wn4pmmqw" path="res://Content/atlases/ui_atlas.png" id="7_s40um"]
-[ext_resource type="Texture2D" uid="uid://q83taaml8mvr" path="res://Content/BattleUiBg/inventory_bg.png" id="8_o204e"]
-[ext_resource type="Texture2D" uid="uid://g2841whvhyo" path="res://Content/BattleUiBg/inventory_head_panel_bg.png" id="10_gl04f"]
-[ext_resource type="Texture2D" uid="uid://bmi0v6ioiknud" path="res://Content/BattleUiBg/inventory_bg_brown.png" id="11_mfha2"]
-[ext_resource type="Texture2D" uid="uid://c1f6l87i1f68m" path="res://Content/BattleUiBg/inventory_line_yellow.png" id="12_fbibd"]
-[ext_resource type="Texture2D" uid="uid://bewrxmn3nxs4l" path="res://Content/BattleUiBg/inventory_up_vignette_brown.png" id="13_bil33"]
-[ext_resource type="Texture2D" uid="uid://c02c1272g3c7h" path="res://Content/BattleUiBg/inventory_up_vignette.png" id="14_ql2ll"]
-[ext_resource type="Texture2D" uid="uid://dnf1d3lvaevlj" path="res://Content/Pattern/11.jpg" id="14_x2lbf"]
+[ext_resource type="Texture2D" uid="uid://cieqdlrrh0mi0" path="res://Content/atlases/ui_atlas.png" id="7_s40um"]
+[ext_resource type="Texture2D" uid="uid://q83taaml8mvr" path="res://Content/UiSprites/BattleUi/BattleUiBg/inventory_bg.png" id="8_o204e"]
+[ext_resource type="Texture2D" uid="uid://g2841whvhyo" path="res://Content/UiSprites/BattleUi/BattleUiBg/inventory_head_panel_bg.png" id="10_gl04f"]
+[ext_resource type="Texture2D" uid="uid://bmi0v6ioiknud" path="res://Content/UiSprites/BattleUi/BattleUiBg/inventory_bg_brown.png" id="11_mfha2"]
+[ext_resource type="Texture2D" uid="uid://c1f6l87i1f68m" path="res://Content/UiSprites/BattleUi/BattleUiBg/inventory_line_yellow.png" id="12_fbibd"]
+[ext_resource type="Texture2D" uid="uid://bewrxmn3nxs4l" path="res://Content/UiSprites/BattleUi/BattleUiBg/inventory_up_vignette_brown.png" id="13_bil33"]
+[ext_resource type="Texture2D" uid="uid://c02c1272g3c7h" path="res://Content/UiSprites/BattleUi/BattleUiBg/inventory_up_vignette.png" id="14_ql2ll"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bben5"]
 
@@ -37,18 +36,6 @@ region = Rect2(424, 328, 322, 58)
 atlas = ExtResource("7_s40um")
 region = Rect2(4, 436, 176, 34)
 margin = Rect2(2, 2, 4, 4)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ihucy"]
-atlas = ExtResource("7_s40um")
-region = Rect2(148, 480, 62, 89)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_6oclp"]
-atlas = ExtResource("7_s40um")
-region = Rect2(337, 489, 70, 74)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_vhmjp"]
-atlas = ExtResource("7_s40um")
-region = Rect2(501, 516, 62, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6wr6s"]
 atlas = ExtResource("7_s40um")
@@ -226,6 +213,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 4
 theme_override_styles/panel = SubResource("StyleBoxTexture_bl2so")
+script = ExtResource("5_cjwqj")
 
 [node name="TextureProgressBar" type="TextureProgressBar" parent="MarginContainer/VBoxContainer/LevelProgressPanel/HBoxContainer/Control/LevelProgressPanel"]
 custom_minimum_size = Vector2(75, 12)
@@ -244,64 +232,15 @@ nine_patch_stretch = true
 texture_under = SubResource("AtlasTexture_ku5m3")
 texture_progress = SubResource("AtlasTexture_hp4lh")
 
-[node name="ProgressPointControl" type="Control" parent="MarginContainer/VBoxContainer/LevelProgressPanel/HBoxContainer/Control/LevelProgressPanel"]
-custom_minimum_size = Vector2(18, 32)
-anchors_preset = 0
-offset_right = 18.0
-offset_bottom = 32.0
-script = ExtResource("5_eesph")
-
-[node name="FlagTextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/LevelProgressPanel/HBoxContainer/Control/LevelProgressPanel/ProgressPointControl"]
-custom_minimum_size = Vector2(14, 20)
+[node name="PointsControl" type="Control" parent="MarginContainer/VBoxContainer/LevelProgressPanel/HBoxContainer/Control/LevelProgressPanel"]
+custom_minimum_size = Vector2(130, 20)
 layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -7.0
-offset_top = -20.0
-offset_right = 7.0
-grow_horizontal = 2
-grow_vertical = 0
-texture = SubResource("AtlasTexture_ihucy")
-expand_mode = 1
-
-[node name="RoundTextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/LevelProgressPanel/HBoxContainer/Control/LevelProgressPanel/ProgressPointControl"]
-custom_minimum_size = Vector2(18, 18)
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -9.0
-offset_top = 2.0
-offset_right = 9.0
-offset_bottom = 20.0
-grow_horizontal = 2
-texture = SubResource("AtlasTexture_6oclp")
-expand_mode = 1
-
-[node name="PointTextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/LevelProgressPanel/HBoxContainer/Control/LevelProgressPanel/ProgressPointControl/RoundTextureRect"]
-custom_minimum_size = Vector2(12, 12)
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
+anchors_preset = 14
 anchor_top = 0.5
-anchor_right = 0.5
+anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -6.0
-offset_top = -6.0
-offset_right = 6.0
-offset_bottom = 6.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = SubResource("AtlasTexture_vhmjp")
-expand_mode = 1
-
-[node name="PointRichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer/LevelProgressPanel/HBoxContainer/Control/LevelProgressPanel/ProgressPointControl"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
 
 [node name="EmptyViewControl3" type="Control" parent="MarginContainer/VBoxContainer/LevelProgressPanel/HBoxContainer"]
 custom_minimum_size = Vector2(48, 0)
@@ -964,23 +903,3 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_v0m8x")
 text = "TO BATTLE!"
 icon_alignment = 1
 script = ExtResource("6_iouhy")
-
-[node name="TextureRect" type="TextureRect" parent="."]
-visible = false
-modulate = Color(1, 1, 1, 0.937255)
-custom_minimum_size = Vector2(360, 800)
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -180.0
-offset_top = -320.0
-offset_right = 180.0
-offset_bottom = 480.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("14_x2lbf")
-expand_mode = 1
-stretch_mode = 4

@@ -1,6 +1,6 @@
 [gd_scene load_steps=18 format=3 uid="uid://cr8oabwajqaqn"]
 
-[ext_resource type="Texture2D" uid="uid://crml4xvwgam4x" path="res://Content/Enemy/Soldier.png" id="1_l32vr"]
+[ext_resource type="Texture2D" uid="uid://crml4xvwgam4x" path="res://Content/atlases/Enemy/Soldier.png" id="1_l32vr"]
 [ext_resource type="Script" path="res://Scripts/Ui/Battle/PlayerPref.gd" id="2_t28f8"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_huwbe"]

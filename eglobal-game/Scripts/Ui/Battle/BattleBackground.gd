@@ -8,8 +8,8 @@ var CurrentScenesCount: int = 0
 func _ready() -> void:
 	#print(SpriteBackground.get_rect().size.x)
 	spawn_background()
-	Events.OnBattlaButtonClick.connect(spawn_background)
-	Events.OnBattlaButtonClick.connect(spawn_enemy)
+	#Events.OnBattlaButtonClick.connect(spawn_background)
+	#Events.OnBattlaButtonClick.connect(spawn_enemy)
 
 func spawn_background() -> void:
 	CurrentScenesCount += 1

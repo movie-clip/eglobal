@@ -8,27 +8,27 @@ script = ExtResource("1_2ns4j")
 [node name="Lanes" type="Node2D" parent="."]
 
 [node name="Lane0" type="ColorRect" parent="Lanes"]
-offset_top = 120.0
+offset_top = 100.0
 offset_right = 360.0
-offset_bottom = 160.0
+offset_bottom = 140.0
 color = Color(1, 1, 1, 0.0823529)
 
 [node name="EnemySpawnerMarker" type="Marker2D" parent="Lanes/Lane0"]
 position = Vector2(341, 22)
 
 [node name="Lane1" type="ColorRect" parent="Lanes"]
-offset_top = 164.0
+offset_top = 144.0
 offset_right = 360.0
-offset_bottom = 204.0
+offset_bottom = 184.0
 color = Color(1, 1, 1, 0.0823529)
 
 [node name="EnemySpawnerMarker" type="Marker2D" parent="Lanes/Lane1"]
 position = Vector2(341, 22)
 
 [node name="Lane2" type="ColorRect" parent="Lanes"]
-offset_top = 208.0
+offset_top = 188.0
 offset_right = 360.0
-offset_bottom = 248.0
+offset_bottom = 228.0
 color = Color(1, 1, 1, 0.0823529)
 
 [node name="EnemySpawnerMarker" type="Marker2D" parent="Lanes/Lane2"]
