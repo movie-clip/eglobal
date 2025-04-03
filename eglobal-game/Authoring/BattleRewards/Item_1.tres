@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="RewardItemData" load_steps=5 format=3 uid="uid://d2wqvg5m0tfft"]
+
+[ext_resource type="Script" path="res://Scripts/Ui/Battle/Data/RewardItemData.gd" id="1_2ubys"]
+[ext_resource type="Texture2D" uid="uid://bpx1g514wd5wo" path="res://Content/atlases/ui_atlas_2.png" id="1_pquuy"]
+[ext_resource type="Texture2D" uid="uid://ykuw36u3wwnl" path="res://Content/UiSprites/ItemsSprites/icon_equip_ring_gold.png" id="2_assjb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v1tma"]
+atlas = ExtResource("1_pquuy")
+region = Rect2(796, 572, 179, 189)
+
+[resource]
+script = ExtResource("1_2ubys")
+ItemTexture = ExtResource("2_assjb")
+BorderTexture = SubResource("AtlasTexture_v1tma")
+ItemCountText = ""

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="RewardItemData" load_steps=5 format=3 uid="uid://odwhj355jf5n"]
+
+[ext_resource type="Texture2D" uid="uid://bpx1g514wd5wo" path="res://Content/atlases/ui_atlas_2.png" id="1_0jdoa"]
+[ext_resource type="Script" path="res://Scripts/Ui/Battle/Data/RewardItemData.gd" id="1_bsaar"]
+[ext_resource type="Texture2D" uid="uid://cp60ey1dx64g6" path="res://Content/UiSprites/ItemsSprites/coin 1.png" id="2_70s8t"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hpoe7"]
+atlas = ExtResource("1_0jdoa")
+region = Rect2(796, 572, 179, 189)
+
+[resource]
+script = ExtResource("1_bsaar")
+ItemTexture = ExtResource("2_70s8t")
+BorderTexture = SubResource("AtlasTexture_hpoe7")
+ItemCount = 500

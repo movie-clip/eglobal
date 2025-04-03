@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="RewardItemData" load_steps=5 format=3 uid="uid://bfho2ofggsspi"]
+
+[ext_resource type="Script" path="res://Scripts/Ui/Battle/Data/RewardItemData.gd" id="1_lmmae"]
+[ext_resource type="Texture2D" uid="uid://bpx1g514wd5wo" path="res://Content/atlases/ui_atlas_2.png" id="1_w6whc"]
+[ext_resource type="Texture2D" uid="uid://bjkyep3kejwry" path="res://Content/UiSprites/ItemsSprites/icon_itemicon_book_skill_1.png" id="2_n3tmj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yvmdx"]
+atlas = ExtResource("1_w6whc")
+region = Rect2(796, 372, 179, 189)
+
+[resource]
+script = ExtResource("1_lmmae")
+ItemTexture = ExtResource("2_n3tmj")
+BorderTexture = SubResource("AtlasTexture_yvmdx")
+ItemCount = 10

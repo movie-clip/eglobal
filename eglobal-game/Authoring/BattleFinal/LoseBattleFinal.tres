@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="BattleFinalSpritesData" load_steps=8 format=3 uid="uid://bv8jhkvd61sgm"]
+
+[ext_resource type="Texture2D" uid="uid://fq44o80rwbo6" path="res://Content/UiSprites/BattleUi/BattleUiBg/bubble_bg_1.png" id="1_r6rjd"]
+[ext_resource type="Script" path="res://Scripts/Ui/Battle/Data/BattleFinalSpritesData.gd" id="1_xk5ip"]
+[ext_resource type="Texture2D" uid="uid://srb2fp8a7a6p" path="res://Content/UiSprites/BattleUi/BattleUiBg/bubble_bg_flag_1.png" id="2_k7k3n"]
+[ext_resource type="Texture2D" uid="uid://u3tqvdw5a0yu" path="res://Content/UiSprites/BattleUi/VictoryLoseIcons/icon_guild_flag_2.png" id="3_a6wpf"]
+[ext_resource type="Texture2D" uid="uid://eo5aevgse55g" path="res://Content/UiSprites/BattleUi/BattleUiBg/effect_ellipse_2.png" id="4_nhi78"]
+[ext_resource type="Texture2D" uid="uid://c0o4wb8ju8p1h" path="res://Content/UiSprites/BattleUi/BattleUiBg/frame_linetext_frame_1.png" id="5_kcbbf"]
+[ext_resource type="Texture2D" uid="uid://dkjlymban5080" path="res://Content/UiSprites/BattleUi/VictoryLoseIcons/icon_broken_swordmark.png" id="6_yff7t"]
+
+[resource]
+script = ExtResource("1_xk5ip")
+FinalName = "Defeated"
+IsLose = true
+HeadTexture = ExtResource("5_kcbbf")
+GlowEffectTexture = ExtResource("4_nhi78")
+FlagTexture = ExtResource("3_a6wpf")
+SwordTexture = ExtResource("6_yff7t")
+BattleRewardPanelTexture = ExtResource("1_r6rjd")
+BubbleFlagTexture = ExtResource("2_k7k3n")

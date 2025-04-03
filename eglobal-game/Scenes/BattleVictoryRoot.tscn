@@ -1,22 +1,22 @@
-[gd_scene load_steps=20 format=3 uid="uid://baexbkjxgaq2k"]
+[gd_scene load_steps=22 format=3 uid="uid://baexbkjxgaq2k"]
 
 [ext_resource type="Texture2D" uid="uid://dojbf0vbcb4d1" path="res://Content/Pattern/battle_victory_ui_pattern.png" id="1_d6v8l"]
+[ext_resource type="Script" path="res://Scripts/Ui/Battle/BattleVictoryLoseControl.gd" id="1_y2uq4"]
 [ext_resource type="Texture2D" uid="uid://dqr7b5gtwkyb0" path="res://Content/UiSprites/BattleUi/BattleUiBg/frame_linetext_frame_2.png" id="2_fdn2u"]
 [ext_resource type="Texture2D" uid="uid://6so3u2ys24mv" path="res://Content/UiSprites/BattleUi/BattleUiBg/effect_fusion_bg.png" id="3_3bkun"]
 [ext_resource type="Texture2D" uid="uid://bfeg8u6r3054p" path="res://Content/UiSprites/BattleUi/BattleUiBg/effect_ellipse_1.png" id="4_okv6f"]
+[ext_resource type="Texture2D" uid="uid://bn2idhqs3fbl5" path="res://Content/UiSprites/BattleUi/VictoryLoseIcons/icon_wings_left.png" id="5_g4n6u"]
 [ext_resource type="Texture2D" uid="uid://crmt2f7fkwqy" path="res://Content/UiSprites/BattleUi/BattleUiBg/bubble_bg_2.png" id="5_imdhg"]
 [ext_resource type="Texture2D" uid="uid://bpx1g514wd5wo" path="res://Content/atlases/ui_atlas_2.png" id="5_wyhel"]
 [ext_resource type="Texture2D" uid="uid://c6eur3g5advme" path="res://Content/UiSprites/BattleUi/BattleUiBg/bubble_bg_flag_2.png" id="6_024wx"]
+[ext_resource type="Texture2D" uid="uid://cab4p2oub8w0n" path="res://Content/UiSprites/BattleUi/VictoryLoseIcons/icon_wings_right.png" id="6_tk11a"]
 [ext_resource type="Texture2D" uid="uid://cieqdlrrh0mi0" path="res://Content/atlases/ui_atlas.png" id="7_6t6qe"]
+[ext_resource type="Script" path="res://Scripts/Ui/Battle/BattleRewardPanel.gd" id="7_dlopm"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_1s6vn"]
 font_size = 28
 outline_size = 5
 outline_color = Color(0, 0, 0, 1)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_hjhod"]
-atlas = ExtResource("5_wyhel")
-region = Rect2(5, 4, 529, 334)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gdonl"]
 atlas = ExtResource("5_wyhel")
@@ -30,10 +30,6 @@ region = Rect2(624, 372, 162, 392)
 font_size = 14
 outline_size = 5
 outline_color = Color(0, 0, 0, 1)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_h1uop"]
-atlas = ExtResource("5_wyhel")
-region = Rect2(796, 572, 179, 189)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_01ner"]
 
@@ -52,13 +48,14 @@ region = Rect2(5, 4, 585, 239)
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_07n42"]
 texture = SubResource("AtlasTexture_p1uhj")
 
-[node name="BattleVictoryControl" type="Control"]
+[node name="BattleVictoryLoseControl" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_y2uq4")
 
 [node name="Pattern" type="TextureRect" parent="."]
 visible = false
@@ -76,9 +73,12 @@ expand_mode = 1
 stretch_mode = 4
 
 [node name="ColorRect" type="ColorRect" parent="."]
-layout_mode = 2
-offset_right = 360.0
-offset_bottom = 640.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 color = Color(0.0235294, 0.0235294, 0.133333, 0.898039)
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
@@ -97,14 +97,26 @@ custom_minimum_size = Vector2(0, 30)
 layout_mode = 2
 size_flags_stretch_ratio = 0.35
 
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer"]
+[node name="HeadControl" type="Control" parent="MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(360, 66)
 layout_mode = 2
+size_flags_vertical = 4
+
+[node name="HeadTextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/HeadControl"]
+custom_minimum_size = Vector2(360, 66)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -180.0
+offset_right = 180.0
+offset_bottom = 66.0
+grow_horizontal = 2
 size_flags_vertical = 0
 texture = ExtResource("2_fdn2u")
 expand_mode = 1
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/TextureRect"]
+[node name="HeadLabel" type="Label" parent="MarginContainer/VBoxContainer/HeadControl/HeadTextureRect"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -117,27 +129,34 @@ horizontal_alignment = 1
 vertical_alignment = 1
 justification_flags = 0
 
-[node name="TextureRect2" type="TextureRect" parent="MarginContainer/VBoxContainer"]
+[node name="EffectControl" type="Control" parent="MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(168, 168)
 layout_mode = 2
+size_flags_vertical = 4
+
+[node name="BgTextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/EffectControl"]
+custom_minimum_size = Vector2(168, 168)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -84.0
+offset_top = 5.0
+offset_right = 84.0
+offset_bottom = 173.0
+grow_horizontal = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
 texture = ExtResource("3_3bkun")
 expand_mode = 1
 stretch_mode = 4
 
-[node name="TextureRect3" type="TextureRect" parent="MarginContainer/VBoxContainer/TextureRect2"]
+[node name="GlowEffectTextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/EffectControl/BgTextureRect"]
 custom_minimum_size = Vector2(360, 360)
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -180.0
-offset_top = -180.0
-offset_right = 180.0
-offset_bottom = 180.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
@@ -146,62 +165,65 @@ texture = ExtResource("4_okv6f")
 expand_mode = 1
 stretch_mode = 4
 
-[node name="TextureRect2" type="TextureRect" parent="MarginContainer/VBoxContainer/TextureRect2"]
-custom_minimum_size = Vector2(120, 80)
+[node name="WingsControl" type="Control" parent="MarginContainer/VBoxContainer/EffectControl/BgTextureRect"]
+custom_minimum_size = Vector2(180, 125)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -90.0
+offset_right = 90.0
+offset_bottom = 125.0
+grow_horizontal = 2
+
+[node name="WingLeftTextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/EffectControl/BgTextureRect/WingsControl"]
+custom_minimum_size = Vector2(80, 120)
 layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = -24.0
-offset_top = -67.0
-offset_right = 96.0
-offset_bottom = 13.0
+offset_top = -56.5
+offset_right = 80.0
+offset_bottom = 63.5
 grow_vertical = 2
-rotation = 1.13446
-pivot_offset = Vector2(60, 40)
-texture = SubResource("AtlasTexture_hjhod")
+pivot_offset = Vector2(80, 60)
+texture = ExtResource("5_g4n6u")
 expand_mode = 1
-flip_h = true
+stretch_mode = 4
 
-[node name="TextureRect4" type="TextureRect" parent="MarginContainer/VBoxContainer/TextureRect2"]
-custom_minimum_size = Vector2(120, 80)
+[node name="WingRightTextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/EffectControl/BgTextureRect/WingsControl"]
+custom_minimum_size = Vector2(80, 120)
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -96.0
-offset_top = -67.0
-offset_right = 24.0
-offset_bottom = 13.0
+offset_left = -80.0
+offset_top = -56.5
+offset_bottom = 63.5
 grow_horizontal = 0
 grow_vertical = 2
-rotation = 2.00713
-pivot_offset = Vector2(60, 40)
-texture = SubResource("AtlasTexture_hjhod")
+pivot_offset = Vector2(0, 60)
+texture = ExtResource("6_tk11a")
 expand_mode = 1
-flip_h = true
-flip_v = true
+stretch_mode = 4
 
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/TextureRect2"]
+[node name="FlagTextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/EffectControl/BgTextureRect"]
 custom_minimum_size = Vector2(102, 84)
 layout_mode = 1
-anchors_preset = 8
+anchors_preset = 5
 anchor_left = 0.5
-anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 0.5
 offset_left = -52.0
-offset_top = -36.0
+offset_top = 42.0
 offset_right = 52.0
-offset_bottom = 48.0
+offset_bottom = 126.0
 grow_horizontal = 2
-grow_vertical = 2
 texture = SubResource("AtlasTexture_gdonl")
 expand_mode = 1
 
-[node name="TextureRect2" type="TextureRect" parent="MarginContainer/VBoxContainer/TextureRect2/TextureRect"]
+[node name="SwordTextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/EffectControl/BgTextureRect/FlagTextureRect"]
 custom_minimum_size = Vector2(38, 92)
 layout_mode = 1
 anchors_preset = 5
@@ -215,18 +237,29 @@ grow_horizontal = 2
 texture = SubResource("AtlasTexture_6vhg5")
 expand_mode = 1
 
-[node name="Control3" type="Control" parent="MarginContainer/VBoxContainer"]
+[node name="EmptyViewControl2" type="Control" parent="MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 28)
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="RewardPanel" type="TextureRect" parent="MarginContainer/VBoxContainer"]
+[node name="BattleRewardControl" type="Control" parent="MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(360, 120)
 layout_mode = 2
+size_flags_vertical = 3
+
+[node name="BattleRewardPanel" type="TextureRect" parent="MarginContainer/VBoxContainer/BattleRewardControl"]
+custom_minimum_size = Vector2(360, 120)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("5_imdhg")
 expand_mode = 1
+script = ExtResource("7_dlopm")
 
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/RewardPanel"]
+[node name="BubbleFlagTextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/BattleRewardControl/BattleRewardPanel"]
 custom_minimum_size = Vector2(160, 46)
 layout_mode = 1
 anchors_preset = 5
@@ -240,7 +273,7 @@ grow_horizontal = 2
 texture = ExtResource("6_024wx")
 expand_mode = 1
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/RewardPanel/TextureRect"]
+[node name="BubbleFlagLabel" type="Label" parent="MarginContainer/VBoxContainer/BattleRewardControl/BattleRewardPanel/BubbleFlagTextureRect"]
 custom_minimum_size = Vector2(140, 40)
 layout_mode = 1
 anchors_preset = 8
@@ -259,7 +292,7 @@ label_settings = SubResource("LabelSettings_4ctr2")
 horizontal_alignment = 1
 justification_flags = 0
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/RewardPanel"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/BattleRewardControl/BattleRewardPanel"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -272,102 +305,18 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 58
 
-[node name="GridContainer" type="GridContainer" parent="MarginContainer/VBoxContainer/RewardPanel/HBoxContainer"]
+[node name="GridContainer" type="GridContainer" parent="MarginContainer/VBoxContainer/BattleRewardControl/BattleRewardPanel/HBoxContainer"]
 layout_mode = 2
 theme_override_constants/h_separation = 58
 columns = 5
 
-[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/RewardPanel/HBoxContainer/GridContainer"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/RewardPanel/HBoxContainer/GridContainer/Control"]
-custom_minimum_size = Vector2(44, 44)
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = SubResource("AtlasTexture_h1uop")
-expand_mode = 1
-
-[node name="Control2" type="Control" parent="MarginContainer/VBoxContainer/RewardPanel/HBoxContainer/GridContainer"]
-visible = false
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/RewardPanel/HBoxContainer/GridContainer/Control2"]
-custom_minimum_size = Vector2(44, 44)
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = SubResource("AtlasTexture_h1uop")
-expand_mode = 1
-
-[node name="Control3" type="Control" parent="MarginContainer/VBoxContainer/RewardPanel/HBoxContainer/GridContainer"]
-visible = false
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/RewardPanel/HBoxContainer/GridContainer/Control3"]
-custom_minimum_size = Vector2(44, 44)
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = SubResource("AtlasTexture_h1uop")
-expand_mode = 1
-
-[node name="Control4" type="Control" parent="MarginContainer/VBoxContainer/RewardPanel/HBoxContainer/GridContainer"]
-visible = false
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/RewardPanel/HBoxContainer/GridContainer/Control4"]
-custom_minimum_size = Vector2(44, 44)
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = SubResource("AtlasTexture_h1uop")
-expand_mode = 1
-
-[node name="Control5" type="Control" parent="MarginContainer/VBoxContainer/RewardPanel/HBoxContainer/GridContainer"]
-visible = false
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/RewardPanel/HBoxContainer/GridContainer/Control5"]
-custom_minimum_size = Vector2(44, 44)
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = SubResource("AtlasTexture_h1uop")
-expand_mode = 1
-
-[node name="Control" type="Control" parent="MarginContainer/VBoxContainer"]
+[node name="EmptyViewControl3" type="Control" parent="MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 5.0
 
-[node name="Button" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="ClaimButton" type="Button" parent="MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(134, 52)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -381,7 +330,7 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_07n42")
 text = "CLAIM"
 icon_alignment = 1
 
-[node name="Control2" type="Control" parent="MarginContainer/VBoxContainer"]
+[node name="EmptyViewControl4" type="Control" parent="MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 35)
 layout_mode = 2
 size_flags_vertical = 3

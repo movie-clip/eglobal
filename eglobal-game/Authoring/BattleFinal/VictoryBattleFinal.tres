@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="BattleFinalSpritesData" load_steps=8 format=3 uid="uid://cfshklqjprjg"]
+
+[ext_resource type="Script" path="res://Scripts/Ui/Battle/Data/BattleFinalSpritesData.gd" id="1_7hm6e"]
+[ext_resource type="Texture2D" uid="uid://crmt2f7fkwqy" path="res://Content/UiSprites/BattleUi/BattleUiBg/bubble_bg_2.png" id="1_8yal1"]
+[ext_resource type="Texture2D" uid="uid://c6eur3g5advme" path="res://Content/UiSprites/BattleUi/BattleUiBg/bubble_bg_flag_2.png" id="2_eqnaf"]
+[ext_resource type="Texture2D" uid="uid://yep4sknfmukv" path="res://Content/UiSprites/BattleUi/VictoryLoseIcons/icon_guild_flag_1.png" id="3_xgmnh"]
+[ext_resource type="Texture2D" uid="uid://bfeg8u6r3054p" path="res://Content/UiSprites/BattleUi/BattleUiBg/effect_ellipse_1.png" id="4_rm67h"]
+[ext_resource type="Texture2D" uid="uid://dqr7b5gtwkyb0" path="res://Content/UiSprites/BattleUi/BattleUiBg/frame_linetext_frame_2.png" id="5_b6q7a"]
+[ext_resource type="Texture2D" uid="uid://dew3pita8itbv" path="res://Content/UiSprites/BattleUi/VictoryLoseIcons/icon_swordmark.png" id="6_byrdl"]
+
+[resource]
+script = ExtResource("1_7hm6e")
+FinalName = "Victory"
+HeadTexture = ExtResource("5_b6q7a")
+GlowEffectTexture = ExtResource("4_rm67h")
+FlagTexture = ExtResource("3_xgmnh")
+SwordTexture = ExtResource("6_byrdl")
+BattleRewardPanelTexture = ExtResource("1_8yal1")
+BubbleFlagTexture = ExtResource("2_eqnaf")
