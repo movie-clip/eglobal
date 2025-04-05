@@ -11,13 +11,14 @@ extends Control
 
 func _ready() -> void:
 	LevelProgressBar.value = 0
-	PlayerHpProgressBar.max_value = Global.player.get_max_hp()
-	PlayerHpProgressBar.value = Global.player.get_current_hp()
-	PlayerExpProgressBar.max_value = Global.player.get_exp_for_next_level()
-	PlayerExpProgressBar.value = Global.player.get_current_exp()
-	change_text(PlayerHpPanelText, "[center][b]" + str(Global.player.get_current_hp()) + " / " + str(Global.player.get_max_hp()))
-	change_text(PlayerExpPanelText, "[center][b]" + "Level " + str(Global.player.get_current_level()))
+	PlayerHpProgressBar.max_value = Global.get_max_hp()
+	PlayerHpProgressBar.value = Global.get_current_hp()
+	PlayerExpProgressBar.max_value = Global.get_exp_for_next_level()
+	PlayerExpProgressBar.value = Global.get_current_exp()
+	change_text(PlayerHpPanelText, "[center][b]" + str(Global.get_current_hp()) + " / " + str(Global.get_max_hp()))
+	change_text(PlayerExpPanelText, "[center][b]" + "Level " + str(Global.get_current_level()))
 	SignalBus.level_stage_complited.connect(change_progress)
+	
 	SignalBus.player_hp_changed.connect(change_hp_view)
 	SignalBus.player_exp_changed.connect(change_exp_view)
 	SignalBus.player_level_changed.connect(change_lvl_view)
@@ -39,7 +40,7 @@ func change_lvl_view(_Value: int) -> void:
 	change_text(PlayerExpPanelText, "[center][b]" + "Level " + str(_Value))
 
 func change_hp_view(_Value: int) -> void:
-	change_text(PlayerHpPanelText, "[center][b]" + str(Global.player.get_current_hp()) + "/" + str(Global.player.get_max_hp()))
+	change_text(PlayerHpPanelText, "[center][b]" + str(Global.get_current_hp()) + "/" + str(Global.get_max_hp()))
 	slider_change_animation(PlayerHpProgressBar, PlayerHpProgressBar.value + _Value, PlayerHpTexture)
 
 func slider_change_animation(_Slider: TextureProgressBar, _Value: int, _Texture: TextureRect) -> void:
@@ -51,3 +52,15 @@ func slider_change_animation(_Slider: TextureProgressBar, _Value: int, _Texture:
 
 func change_text(_TextLabel: RichTextLabel, _Text: String) -> void:
 	_TextLabel.text = _Text
+
+func open_reward_panel(Value: bool) -> void:
+	var container = get_parent()
+	var reward_panel_scane = preload("res://Scenes/BattleVictoryRoot.tscn")
+	var reward_panel:BattleVictoryLoseControl = reward_panel_scane.instantiate()
+	if Value == true:
+		var victory_test_data: BattleFinalSpritesData = preload("res://Authoring/BattleFinal/VictoryBattleFinal.tres")
+		reward_panel.data = victory_test_data
+	else:
+		var lose_test_data: BattleFinalSpritesData = preload("res://Authoring/BattleFinal/LoseBattleFinal.tres")
+		reward_panel.data = lose_test_data
+	container.add_child(reward_panel)

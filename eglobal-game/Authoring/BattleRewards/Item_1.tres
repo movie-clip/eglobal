@@ -12,4 +12,4 @@ region = Rect2(796, 572, 179, 189)
 script = ExtResource("1_2ubys")
 ItemTexture = ExtResource("2_assjb")
 BorderTexture = SubResource("AtlasTexture_v1tma")
-ItemCountText = ""
+ItemCount = 0

@@ -16,8 +16,8 @@ const  victory_test_data: BattleFinalSpritesData = preload("res://Authoring/Batt
 const  lose_test_data: BattleFinalSpritesData = preload("res://Authoring/BattleFinal/LoseBattleFinal.tres")
 
 func _ready() -> void:
-	if lose_test_data:
-		init(lose_test_data)
+	if data:
+		init(data)
 
 func _process(delta: float) -> void:
 	pass
@@ -32,5 +32,4 @@ func init(_BattleFinalSpritesData: BattleFinalSpritesData) -> void:
 	BubbleFlagTextureRect.texture = _BattleFinalSpritesData.BubbleFlagTexture
 	if _BattleFinalSpritesData.IsLose:
 		WingLeftTextureRect.rotation = -1.17
-		print(WingLeftTextureRect.rotation)
 		WingRightTextureRect.rotation = 1.17
