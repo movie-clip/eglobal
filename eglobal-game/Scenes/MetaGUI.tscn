@@ -1,7 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://voj32tc2k8j0"]
+[gd_scene load_steps=2 format=3 uid="uid://p44ciexu85q0"]
 
 [ext_resource type="Script" path="res://Scripts/Meta/MetaController.gd" id="1_w8dnf"]
-[ext_resource type="PackedScene" uid="uid://dgg1ntx01ontc" path="res://Scenes/Inventory/inventory_scene.tscn" id="2_hwkbd"]
 
 [node name="MetaGUI" type="Control"]
 layout_mode = 3
@@ -11,8 +10,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_w8dnf")
-
-[node name="Inventory" parent="." instance=ExtResource("2_hwkbd")]
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0

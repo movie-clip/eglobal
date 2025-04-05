@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://b5jmg6p84rtc0"]
+[gd_scene load_steps=6 format=3 uid="uid://b5kar4u4nwi5h"]
 
 [ext_resource type="Script" path="res://Scripts/Ui/Battle/ProgressPointControl.gd" id="1_wt116"]
 [ext_resource type="Texture2D" uid="uid://cieqdlrrh0mi0" path="res://Content/atlases/ui_atlas.png" id="2_66ota"]

@@ -12,3 +12,5 @@ signal player_level_changed(Value:int)
 signal player_attack_changed(Value:int)
 signal player_defence_changed(Value:int)
 signal player_move_finished(PlayerPos: Vector2)
+
+signal player_died()

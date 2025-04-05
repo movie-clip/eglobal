@@ -1,8 +1,6 @@
 extends Control
 class_name MetaController
 
-@onready var inventory: Inventory = $Inventory
-@onready var inventory_ui: InventoryUI = inventory.get_node("InventoryUI")
 @onready var add_button: Button = $Button
 
 func _ready() -> void:
@@ -10,14 +8,8 @@ func _ready() -> void:
 	add_button.pressed.connect(_on_start_btn_pressed)
 
 func _on_start_btn_pressed() -> void:
-	print("Button Clicked!")
-	var items = [
-		preload("res://Authoring/Inventory/Items/shield_item.tres"),
-		preload("res://Authoring/Inventory/Items/sword_item.tres")
-	]
-	var item = items[randi() % items.size()]
-	inventory.place_item(item)
-	inventory_ui.updateView()
+	Global.game_controller.change_gui_scene(Util.GUI_SCENES.BATTLE, true)
+	Global.game_controller.change_2d_scene(Util.WORLD_SCENES.BATTLE)
 	
 	
 	
