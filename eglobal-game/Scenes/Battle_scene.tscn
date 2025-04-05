@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://bi134hvlepmwt"]
 
 [ext_resource type="PackedScene" uid="uid://cr8oabwajqaqn" path="res://Scenes/PlayerPref.tscn" id="1_qih20"]
-[ext_resource type="PackedScene" uid="uid://dxj68qfu7tivi" path="res://Scenes/BattleUiRoot.tscn" id="1_sfp4e"]
-[ext_resource type="PackedScene" uid="uid://dptuagfoukl5o" path="res://Scenes/Battle_background.tscn" id="2_avlyu"]
+[ext_resource type="PackedScene" uid="uid://dxj68qfu7tivi" path="res://Scenes/Battle/UI/BattleUiRoot.tscn" id="1_sfp4e"]
+[ext_resource type="PackedScene" uid="uid://dptuagfoukl5o" path="res://Scenes/Battle/UI/Battle_background.tscn" id="2_avlyu"]
 
 [node name="Node2D" type="Node2D"]
 

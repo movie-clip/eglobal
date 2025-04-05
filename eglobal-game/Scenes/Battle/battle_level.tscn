@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scripts/Battle/BattleController.gd" id="1_2e8vg"]
 [ext_resource type="PackedScene" uid="uid://cx2c47773mw32" path="res://Scenes/Levels/level_1.tscn" id="2_hqyh2"]
-[ext_resource type="PackedScene" uid="uid://dxj68qfu7tivi" path="res://Scenes/BattleUiRoot.tscn" id="3_fbc48"]
+[ext_resource type="PackedScene" uid="uid://dxj68qfu7tivi" path="res://Scenes/Battle/UI/BattleUiRoot.tscn" id="3_fbc48"]
 
 [node name="BattleController" type="Node"]
 script = ExtResource("1_2e8vg")
