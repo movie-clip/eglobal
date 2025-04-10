@@ -2,27 +2,26 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b4x01pg4pih7m"
-path.s3tc="res://.godot/imported/player_atlas.png-ffd1f07f65a9ed74fb84f3b7547c9093.s3tc.ctex"
+uid="uid://4wjrr1aso3qp"
+path="res://.godot/imported/LongAxe.png-e3c7c5aea7188d80609f6e66cb4e5712.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
-source_file="res://Content/Atlases/player_atlas.png"
-dest_files=["res://.godot/imported/player_atlas.png-ffd1f07f65a9ed74fb84f3b7547c9093.s3tc.ctex"]
+source_file="res://Content/LongAxe.png"
+dest_files=["res://.godot/imported/LongAxe.png-e3c7c5aea7188d80609f6e66cb4e5712.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=true
+mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
@@ -32,4 +31,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=0
+detect_3d/compress_to=1

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="InventoryData" load_steps=2 format=3 uid="uid://dfma05qpetcir"]
+
+[ext_resource type="Script" path="res://Scripts/Inventory/Data/InventoryData.gd" id="1_lsdjx"]
+
+[resource]
+resource_name = "Rank 1"
+script = ExtResource("1_lsdjx")
+grid_width = 4
+grid_height = 3
+grid_extra = 3
+grid = []

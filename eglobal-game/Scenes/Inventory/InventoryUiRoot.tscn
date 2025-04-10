@@ -1,0 +1,176 @@
+[gd_scene load_steps=12 format=3 uid="uid://bj5b1fcseb785"]
+
+[ext_resource type="Script" path="res://Scripts/Inventory/GUI/InventoryUI.gd" id="1_cg2rj"]
+[ext_resource type="Texture2D" uid="uid://bewrxmn3nxs4l" path="res://Content/UiSprites/BattleUi/BattleUiBg/inventory_up_vignette_brown.png" id="1_e1dfw"]
+[ext_resource type="Script" path="res://Scripts/Inventory/Controllers/Inventory.gd" id="1_e2esq"]
+[ext_resource type="Texture2D" uid="uid://c1f6l87i1f68m" path="res://Content/UiSprites/BattleUi/BattleUiBg/inventory_line_yellow.png" id="2_p0jkr"]
+[ext_resource type="Resource" uid="uid://dypwufi01s1b8" path="res://Authoring/Inventory/Rank/InventoryDataRank6.tres" id="2_u0chk"]
+[ext_resource type="Texture2D" uid="uid://g2841whvhyo" path="res://Content/UiSprites/BattleUi/BattleUiBg/inventory_head_panel_bg.png" id="3_6iark"]
+[ext_resource type="Texture2D" uid="uid://bmi0v6ioiknud" path="res://Content/UiSprites/BattleUi/BattleUiBg/inventory_bg_brown.png" id="4_xp4x4"]
+[ext_resource type="Texture2D" uid="uid://c02c1272g3c7h" path="res://Content/UiSprites/BattleUi/BattleUiBg/inventory_up_vignette.png" id="5_jk674"]
+[ext_resource type="PackedScene" uid="uid://qgvcgbuijbr2" path="res://Scenes/Inventory/inventory_item_ui_h3.tscn" id="10_6rkgk"]
+[ext_resource type="PackedScene" uid="uid://ctncfx758dasd" path="res://Scenes/Inventory/inventory_item_ui_h2.tscn" id="10_xum0v"]
+[ext_resource type="PackedScene" uid="uid://dg276dr4btwfm" path="res://Scenes/Inventory/inventory_item_ui_t.tscn" id="11_yens0"]
+
+[node name="InventoryUiRoot" type="Control" node_paths=PackedStringArray("ui")]
+custom_minimum_size = Vector2(280, 260)
+layout_mode = 3
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -128.0
+offset_top = 8.0
+offset_right = 128.0
+offset_bottom = 248.0
+grow_horizontal = 2
+script = ExtResource("1_e2esq")
+data = ExtResource("2_u0chk")
+ui = NodePath("InventoryCenterContainer")
+
+[node name="InventoryHeadTextureRect" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(278, 44)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -139.0
+offset_right = 139.0
+offset_bottom = 44.0
+grow_horizontal = 2
+texture = ExtResource("1_e1dfw")
+expand_mode = 1
+
+[node name="NinePatchRect1" type="NinePatchRect" parent="InventoryHeadTextureRect"]
+custom_minimum_size = Vector2(256, 240)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -128.0
+offset_top = 15.85
+offset_right = 128.0
+offset_bottom = 255.85
+grow_horizontal = 2
+texture = ExtResource("2_p0jkr")
+
+[node name="TextureRect1" type="TextureRect" parent="InventoryHeadTextureRect"]
+custom_minimum_size = Vector2(248, 45)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -124.0
+offset_top = 10.0
+offset_right = 124.0
+offset_bottom = 55.0
+grow_horizontal = 2
+texture = ExtResource("3_6iark")
+expand_mode = 1
+
+[node name="NinePatchRect2" type="NinePatchRect" parent="InventoryHeadTextureRect"]
+custom_minimum_size = Vector2(252, 222)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -126.0
+offset_top = 33.0
+offset_right = 126.0
+offset_bottom = 255.0
+grow_horizontal = 2
+texture = ExtResource("4_xp4x4")
+
+[node name="TextureRect2" type="TextureRect" parent="InventoryHeadTextureRect"]
+custom_minimum_size = Vector2(260, 42)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -130.0
+offset_top = -42.0
+offset_right = 130.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("5_jk674")
+expand_mode = 1
+
+[node name="InventoryCenterContainer" type="CenterContainer" parent="."]
+custom_minimum_size = Vector2(202, 202)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -103.0
+offset_top = -220.0
+offset_right = 103.0
+offset_bottom = -14.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 5
+size_flags_vertical = 8
+script = ExtResource("1_cg2rj")
+
+[node name="FreeSlotsGridContainer" type="GridContainer" parent="InventoryCenterContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+columns = 5
+
+[node name="GridContainer" type="GridContainer" parent="InventoryCenterContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/h_separation = 4
+theme_override_constants/v_separation = 4
+columns = 5
+
+[node name="TestButtonUnlockFreeSlot" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = 272.0
+offset_right = 130.0
+offset_bottom = 303.0
+grow_vertical = 0
+text = "Unlock free slot"
+
+[node name="TestBagLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = 316.0
+offset_right = 69.0
+offset_bottom = 339.0
+grow_vertical = 0
+text = "Bag rank"
+
+[node name="InventoryItemUiH2" parent="." instance=ExtResource("10_xum0v")]
+offset_left = 236.0
+offset_top = 511.0
+offset_right = 274.0
+offset_bottom = 589.0
+
+[node name="InventoryItemUiH4" parent="." instance=ExtResource("10_6rkgk")]
+offset_left = 101.0
+offset_top = 317.0
+offset_right = 139.0
+offset_bottom = 439.0
+
+[node name="InventoryItemUiH3" parent="." instance=ExtResource("10_6rkgk")]
+offset_left = 170.0
+offset_top = 473.0
+offset_right = 208.0
+offset_bottom = 591.0
+
+[node name="InventoryItemUiT" parent="." instance=ExtResource("11_yens0")]
+offset_left = 168.0
+offset_top = 317.0
+offset_right = 290.0
+offset_bottom = 439.0

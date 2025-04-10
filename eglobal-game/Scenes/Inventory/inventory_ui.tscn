@@ -1,10 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://bwabjqgnwqwoc"]
+[gd_scene load_steps=3 format=3 uid="uid://bwabjqgnwqwoc"]
 
 [ext_resource type="Texture2D" uid="uid://bpd3ipjvfxm7x" path="res://Content/Sprites/InventoryRect.png" id="1_pwb6f"]
-[ext_resource type="PackedScene" uid="uid://cacekwx8jvv2s" path="res://Scenes/Inventory/inventory_slot_ui.tscn" id="2_igies"]
-[ext_resource type="PackedScene" uid="uid://cd7lr7njlis5l" path="res://Scenes/Inventory/inventory_slot_ui_1x2.tscn" id="3_3nab2"]
+[ext_resource type="Script" path="res://Scripts/Inventory/GUI/InventoryUI.gd" id="1_rpunw"]
 
 [node name="InventoryUI" type="Control"]
+custom_minimum_size = Vector2(360, 0)
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -14,11 +14,18 @@ offset_right = -178.0
 offset_bottom = -424.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_rpunw")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
-layout_mode = 0
-offset_right = 182.0
-offset_bottom = 134.0
+custom_minimum_size = Vector2(360, 180)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("1_pwb6f")
 patch_margin_left = 6
 patch_margin_top = 6
@@ -26,26 +33,10 @@ patch_margin_right = 6
 patch_margin_bottom = 6
 
 [node name="GridContainer" type="GridContainer" parent="NinePatchRect"]
-custom_minimum_size = Vector2(30, 30)
+custom_minimum_size = Vector2(360, 180)
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -81.5
-offset_top = -58.0
-offset_right = 81.5
-offset_bottom = 58.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-columns = 5
-
-[node name="InventorySlotUI" parent="NinePatchRect/GridContainer" instance=ExtResource("2_igies")]
-layout_mode = 2
-
-[node name="InventorySlotUI2" parent="NinePatchRect/GridContainer" instance=ExtResource("2_igies")]
-layout_mode = 2
-
-[node name="InventorySlotUI_1x2" parent="NinePatchRect/GridContainer" instance=ExtResource("3_3nab2")]
-layout_mode = 2

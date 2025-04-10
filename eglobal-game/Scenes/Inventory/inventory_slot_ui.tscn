@@ -1,14 +1,80 @@
-[gd_scene load_steps=2 format=3 uid="uid://cacekwx8jvv2s"]
+[gd_scene load_steps=9 format=3 uid="uid://cacekwx8jvv2s"]
 
+[ext_resource type="Script" path="res://Scripts/Inventory/GUI/InventorySlotUI.gd" id="1_ff4e1"]
 [ext_resource type="Texture2D" uid="uid://c5wosvryy0p31" path="res://Content/Sprites/inventorySlot.png" id="2_3euby"]
+[ext_resource type="Texture2D" uid="uid://cieqdlrrh0mi0" path="res://Content/Atlases/ui_atlas.png" id="2_mb6kl"]
 
-[node name="InventorySlotUI" type="Panel"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_66bw1"]
+atlas = ExtResource("2_mb6kl")
+region = Rect2(600, 4, 160, 168)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ym3qo"]
+atlas = ExtResource("2_mb6kl")
+region = Rect2(768, 176, 160, 164)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_13s7m"]
+atlas = ExtResource("2_mb6kl")
+region = Rect2(600, 4, 160, 168)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ic677"]
+atlas = ExtResource("2_mb6kl")
+region = Rect2(226, 401, 100, 102)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_22tl3"]
+size = Vector2(18.5461, 19.219)
+
+[node name="InventorySlotUI" type="Panel" node_paths=PackedStringArray("texture")]
 self_modulate = Color(1, 1, 1, 0)
-custom_minimum_size = Vector2(20, 20)
-offset_right = 20.0
-offset_bottom = 20.0
+custom_minimum_size = Vector2(38, 38)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -180.0
+offset_top = -320.0
+offset_right = -142.0
+offset_bottom = -282.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ff4e1")
+texture = NodePath("BackgroundTextureRect")
+empty_texture = SubResource("AtlasTexture_66bw1")
+extra_texture = SubResource("AtlasTexture_ym3qo")
 
 [node name="Background" type="Sprite2D" parent="."]
+visible = false
 texture = ExtResource("2_3euby")
 centered = false
 vframes = 2
+
+[node name="BackgroundTextureRect" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(38, 38)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_13s7m")
+expand_mode = 1
+
+[node name="ItemTextureRect" type="TextureRect" parent="."]
+visible = false
+custom_minimum_size = Vector2(38, 38)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_ic677")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="SlotArea2D" type="Area2D" parent="."]
+scale = Vector2(2.04894, 1.97721)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SlotArea2D"]
+position = Vector2(9.27307, 9.60949)
+shape = SubResource("RectangleShape2D_22tl3")

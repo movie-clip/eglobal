@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://b3jfel7gonfwk"]
+
+[ext_resource type="Script" path="res://Scripts/Inventory/GUI/ItemsPanelUi.gd" id="1_whryg"]
+[ext_resource type="PackedScene" uid="uid://ctncfx758dasd" path="res://Scenes/Inventory/inventory_item_ui_h2.tscn" id="2_crivf"]
+[ext_resource type="PackedScene" uid="uid://c25ea3dndylga" path="res://Scenes/Inventory/inventory_item_ui.tscn" id="3_ifxng"]
+
+[node name="ItemsPanelControl" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+script = ExtResource("1_whryg")
+inventory_items_ui = [ExtResource("2_crivf"), ExtResource("3_ifxng"), null]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+custom_minimum_size = Vector2(300, 120)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -150.0
+offset_right = 150.0
+offset_bottom = 118.0
+grow_horizontal = 2
+theme_override_constants/separation = 10
+alignment = 1

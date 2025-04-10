@@ -4,6 +4,7 @@
 
 [resource]
 script = ExtResource("1_0i1fw")
-grid_width = 10
-grid_height = 6
+grid_width = 5
+grid_height = 4
+grid_extra = 5
 grid = []
