@@ -1,0 +1,3 @@
+extends Node
+
+enum ITEM_TYPE {CROSSBOW, MORGENSTERN}

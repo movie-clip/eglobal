@@ -1,4 +1,7 @@
-extends Node
+extends Resource
 class_name InventoryItemViewModel
 
-var itemName: String
+@export var itemType: int
+@export var itemName: String
+@export var texture: Texture2D
+@export var shape: InventoryShape

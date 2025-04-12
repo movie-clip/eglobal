@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="InventoryViewModelTable" load_steps=3 format=3 uid="uid://c64837nkmbrkr"]
+
+[ext_resource type="Script" path="res://Scripts/Inventory/Service/InventoryResourceTable.gd" id="1_h36mo"]
+[ext_resource type="Resource" uid="uid://sxfpufjhjqoa" path="res://Authoring/Inventory/Service/item1.tres" id="2_kb1dg"]
+
+[resource]
+script = ExtResource("1_h36mo")
+view_models = [ExtResource("2_kb1dg")]
