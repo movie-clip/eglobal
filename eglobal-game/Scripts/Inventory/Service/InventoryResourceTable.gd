@@ -8,6 +8,3 @@ func get_viewModel(item_type: int) -> InventoryItemViewModel:
 		if item.itemType == item_type:
 			return item
 	return null
-	
-		
-	
