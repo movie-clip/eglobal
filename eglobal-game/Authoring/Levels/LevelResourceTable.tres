@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="LevelResourceTable" load_steps=3 format=3 uid="uid://bhku2ag2oj10t"]
+
+[ext_resource type="Script" path="res://Scripts/Battle/Levels/LevelResourceTable.gd" id="1_j0aan"]
+[ext_resource type="Resource" uid="uid://ddqk7ppwhrob" path="res://Authoring/Levels/Level1Config.tres" id="1_uf8t7"]
+
+[resource]
+script = ExtResource("1_j0aan")
+level_configs = [ExtResource("1_uf8t7")]

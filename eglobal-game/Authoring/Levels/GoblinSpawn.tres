@@ -1,9 +1,0 @@
-[gd_resource type="Resource" script_class="EnemySpawnData" load_steps=3 format=3 uid="uid://c5rb5v50t65h0"]
-
-[ext_resource type="Resource" uid="uid://6bcffrgrin1k" path="res://Authoring/Enemies/EnemyGoblin.tres" id="1_l7kk6"]
-[ext_resource type="Script" path="res://Scripts/Battle/Enemy/Data/EnemySpawnData.gd" id="1_w1w7x"]
-
-[resource]
-script = ExtResource("1_w1w7x")
-enemy = ExtResource("1_l7kk6")
-lane = 0

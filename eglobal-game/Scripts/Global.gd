@@ -7,6 +7,8 @@ var playerService: PlayerService
 var inventoryService: InventoryService
 var inventoryDataProvider: InventoryDataProvider
 
+var levelDataProvider: LevelDataProvider
+
 func _ready() -> void:
 	playerService = PlayerService.new()
 	
@@ -15,6 +17,9 @@ func _ready() -> void:
 
 	inventoryDataProvider = InventoryDataProvider.new()
 	inventoryDataProvider.init()
+	
+	levelDataProvider = LevelDataProvider.new()
+	levelDataProvider.init() 
 
 func on_battla_button_clicked() -> void:
 	SignalBus.battle_button_clicked.emit()

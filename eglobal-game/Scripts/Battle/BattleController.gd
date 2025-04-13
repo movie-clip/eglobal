@@ -1,40 +1,16 @@
-extends Node
+extends Node2D
 class_name BattleController
 
-@onready var level_config: LevelSceneController = $LevelScene
 @onready var player = $Player
 @onready var gui_container: CanvasLayer = $CanvasLayer
 
+var level_controller: LevelSceneController
+
 func _ready():
+	level_controller = LevelSceneController.new()
 	Global.playerService.create_player()
-#	SignalBus.level_complited.connect(open_reward_panel)
 
-func spawn_enemy_in_lane(enemy_data: EnemyData, lane_index: int) -> void:
-	if lane_index < 0 or lane_index >= level_config.lanes_config.size():
-		push_error("Invalid lane index!")
-		return
-	
-	var lane_info = level_config.lanes_config[lane_index]
-	var spawn_position = lane_info["spawn_pos"]
-	var target_position = lane_info["target_pos"]
-	
-	var enemy_scene = preload("res://Scenes/Battle/enemy.tscn")
-	var enemy: EnemyController = enemy_scene.instantiate()
-	
-	enemy.data = enemy_data
-	enemy.global_position = spawn_position
-	enemy.targetPosition = target_position
-	
-	add_child(enemy)
-
-
-#func open_reward_panel(Value: bool) -> void:
-#	var reward_panel_scane = preload(Util.BattleUIVictory)
-#	var reward_panel:BattleVictoryLoseControl = reward_panel_scane.instantiate()
-#	if Value == true:
-#		var victory_test_data: BattleFinalSpritesData = preload("res://Authoring/BattleFinal/VictoryBattleFinal.tres")
-#		reward_panel.data = victory_test_data
-#	else:
-#		var lose_test_data: BattleFinalSpritesData = preload("res://Authoring/BattleFinal/LoseBattleFinal.tres")
-#		reward_panel.data = lose_test_data
-#	gui_container.add_child(reward_panel)
+func load_level(levelID: int):
+	var level_config = Global.levelDataProvider.get_level_config(levelID)
+	level_controller.load_level(level_config)
+	pass

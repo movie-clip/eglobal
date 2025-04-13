@@ -1,11 +1,13 @@
 [gd_scene load_steps=3 format=3 uid="uid://dh4hvupdn14av"]
 
 [ext_resource type="Script" path="res://Scripts/Battle/BattleController.gd" id="1_2e8vg"]
-[ext_resource type="PackedScene" uid="uid://cx2c47773mw32" path="res://Scenes/Levels/level_1.tscn" id="2_hqyh2"]
+[ext_resource type="Script" path="res://Scripts/Battle/Levels/LevelSceneController.gd" id="2_jiyf5"]
 
-[node name="BattleController" type="Node"]
+[node name="BattlerController" type="Node2D"]
 script = ExtResource("1_2e8vg")
 
-[node name="LevelScene" parent="." instance=ExtResource("2_hqyh2")]
+[node name="LevelController" type="Node2D" parent="." node_paths=PackedStringArray("level_container")]
+script = ExtResource("2_jiyf5")
+level_container = NodePath("LevelContainer")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="LevelContainer" type="Node2D" parent="LevelController"]

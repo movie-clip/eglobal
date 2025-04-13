@@ -1,9 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://7fk6htu0wgvs"]
-
-[ext_resource type="Script" path="res://Scripts/Battle/BattleController.gd" id="1_px7wn"]
-
-[node name="BattleController" type="Node2D" node_paths=PackedStringArray("spawn_point")]
-script = ExtResource("1_px7wn")
-spawn_point = NodePath("PlayerPosition")
-
-[node name="PlayerPosition" type="Node2D" parent="."]
