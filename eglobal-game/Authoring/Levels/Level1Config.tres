@@ -1,9 +1,0 @@
-[gd_resource type="Resource" script_class="LevelConfiguration" load_steps=3 format=3 uid="uid://ddqk7ppwhrob"]
-
-[ext_resource type="PackedScene" uid="uid://cx2c47773mw32" path="res://Scenes/Levels/level_1.tscn" id="1_m64fk"]
-[ext_resource type="Script" path="res://Scripts/Battle/Levels/LevelConfiguration.gd" id="2_ppju6"]
-
-[resource]
-script = ExtResource("2_ppju6")
-id = 0
-level_scene = ExtResource("1_m64fk")

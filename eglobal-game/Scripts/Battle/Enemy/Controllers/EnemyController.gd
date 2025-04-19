@@ -1,7 +1,7 @@
 extends CharacterBody2D
 class_name EnemyController
 
-@export var data: EnemyData
+@export var data: EnemyConfiguration
 @export var targetPosition: Vector2
 
 @onready var sprite: Sprite2D = $Panel/Sprite2D 

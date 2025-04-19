@@ -7,7 +7,7 @@
 [ext_resource type="Script" path="res://Scripts/Ui/Battle/LevelProgressPanel.gd" id="5_cjwqj"]
 [ext_resource type="Script" path="res://Scripts/Ui/Battle/AllStatsPanel.gd" id="5_skxg0"]
 [ext_resource type="Script" path="res://Scripts/Ui/Battle/BattleButton.gd" id="6_iouhy"]
-[ext_resource type="Texture2D" uid="uid://cieqdlrrh0mi0" path="res://Content/Atlases/ui_atlas.png" id="7_s40um"]
+[ext_resource type="Texture2D" uid="uid://cieqdlrrh0mi0" path="res://Content/atlases/ui_atlas.png" id="7_s40um"]
 [ext_resource type="Texture2D" uid="uid://q83taaml8mvr" path="res://Content/UiSprites/BattleUi/BattleUiBg/inventory_bg.png" id="8_o204e"]
 [ext_resource type="PackedScene" uid="uid://bj5b1fcseb785" path="res://Scenes/Inventory/InventoryUiRoot.tscn" id="9_yxxpv"]
 

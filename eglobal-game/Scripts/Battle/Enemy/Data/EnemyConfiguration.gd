@@ -1,5 +1,5 @@
 extends Resource
-class_name EnemyData
+class_name EnemyConfiguration
 
 @export var name: String
 @export var health: int

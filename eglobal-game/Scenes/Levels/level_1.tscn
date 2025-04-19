@@ -1,35 +1,9 @@
-[gd_scene format=3 uid="uid://cx2c47773mw32"]
+[gd_scene load_steps=2 format=3 uid="uid://cx2c47773mw32"]
 
-[node name="Level" type="Node2D"]
+[ext_resource type="Script" path="res://Scripts/Battle/Levels/LevelController.gd" id="1_8840i"]
 
-[node name="Lanes" type="Node2D" parent="."]
+[node name="Level" type="Node2D" node_paths=PackedStringArray("stage_container")]
+script = ExtResource("1_8840i")
+stage_container = NodePath("StageContoiner")
 
-[node name="Lane0" type="ColorRect" parent="Lanes"]
-offset_top = 100.0
-offset_right = 360.0
-offset_bottom = 140.0
-color = Color(1, 1, 1, 0.0823529)
-
-[node name="EnemySpawnerMarker" type="Marker2D" parent="Lanes/Lane0"]
-position = Vector2(341, 22)
-
-[node name="Lane1" type="ColorRect" parent="Lanes"]
-offset_top = 144.0
-offset_right = 360.0
-offset_bottom = 184.0
-color = Color(1, 1, 1, 0.0823529)
-
-[node name="EnemySpawnerMarker" type="Marker2D" parent="Lanes/Lane1"]
-position = Vector2(341, 22)
-
-[node name="Lane2" type="ColorRect" parent="Lanes"]
-offset_top = 188.0
-offset_right = 360.0
-offset_bottom = 228.0
-color = Color(1, 1, 1, 0.0823529)
-
-[node name="EnemySpawnerMarker" type="Marker2D" parent="Lanes/Lane2"]
-position = Vector2(341, 19)
-
-[node name="PlayerSpawn" type="Marker2D" parent="."]
-position = Vector2(28, 186)
+[node name="StageContoiner" type="Node2D" parent="."]

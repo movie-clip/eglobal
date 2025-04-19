@@ -1,16 +1,17 @@
 extends Node2D
 class_name BattleController
 
-@onready var player = $Player
-@onready var gui_container: CanvasLayer = $CanvasLayer
-
-var level_controller: LevelSceneController
+@export var level_controller: LevelSceneController
 
 func _ready():
-	level_controller = LevelSceneController.new()
-	Global.playerService.create_player()
+	load_level(0)
+	level_controller.start_level()
+
 
 func load_level(levelID: int):
 	var level_config = Global.levelDataProvider.get_level_config(levelID)
 	level_controller.load_level(level_config)
-	pass
+	level_controller.load_stage(level_config.stages[0])
+
+	
+	

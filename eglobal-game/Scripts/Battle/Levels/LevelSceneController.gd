@@ -2,28 +2,36 @@ extends Node2D
 class_name LevelSceneController
 
 @export var level_container: Node2D
-@export var lanes_node_path: NodePath = "Lanes"
-@export var player_spawn_path: NodePath = "PlayerSpawn"
 
-var lanes_config: Array = []
-var player_spawn_position: Vector2 = Vector2.ZERO
-
-var current_level: Node2D = null
+var current_level_scene: LevelController
+var current_level_config: LevelConfiguration
 
 func _ready():
-	var config = preload("res://Authoring/Levels/Level1Config.tres")
-	load_level(config)
+	pass
 
 func load_level(config: LevelConfiguration):
-	if current_level:
-		current_level.queue_free()
-		current_level = null
-		
-	current_level = config.level_scene.instantiate()
-	level_container.add_child(current_level)
-	_collect_level_configuration()
+	if current_level_scene:
+		current_level_scene.queue_free()
+		current_level_scene = null
+		current_level_config = null
+	
+	current_level_config = config
+	current_level_scene = config.level_scene.instantiate()
+	level_container.add_child(current_level_scene)
 
+func load_stage(config: StageConfiguration):
+	current_level_scene.load_stage(config)
 
+func start_level():
+	if !current_level_scene:
+		return
+	current_level_scene.activate_enemy_spawner()
+
+func next_stage():
+	current_level_scene.load_stage(current_level_config.stages[0])
+	
+
+	
 #func spawn_enemy_in_lane(enemy_data: EnemyData, lane_index: int) -> void:
 	#if lane_index < 0 or lane_index >= level_config.lanes_config.size():
 		#push_error("Invalid lane index!")
@@ -41,16 +49,3 @@ func load_level(config: LevelConfiguration):
 	#enemy.targetPosition = target_position
 	#
 	#add_child(enemy)
-	
-func _collect_level_configuration():
-	var lanes_node = current_level.get_node_or_null(lanes_node_path)
-	lanes_config.clear()
-	for lane in lanes_node.get_children():
-		var lane_y = lane.global_position.y
-		var spawner_marker = lane.get_node("EnemySpawnerMarker")
-		var spawn_pos = spawner_marker.global_position
-		lanes_config.append({ "lane_y": lane_y, "spawn_pos": spawn_pos, "target_pos": player_spawn_position })
-	
-	var player_spawn = current_level.get_node(player_spawn_path)
-	player_spawn_position = player_spawn.global_position
-	

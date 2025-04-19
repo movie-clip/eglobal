@@ -3,8 +3,9 @@
 [ext_resource type="Script" path="res://Scripts/Battle/BattleController.gd" id="1_2e8vg"]
 [ext_resource type="Script" path="res://Scripts/Battle/Levels/LevelSceneController.gd" id="2_jiyf5"]
 
-[node name="BattlerController" type="Node2D"]
+[node name="BattlerController" type="Node2D" node_paths=PackedStringArray("level_controller")]
 script = ExtResource("1_2e8vg")
+level_controller = NodePath("LevelController")
 
 [node name="LevelController" type="Node2D" parent="." node_paths=PackedStringArray("level_container")]
 script = ExtResource("2_jiyf5")

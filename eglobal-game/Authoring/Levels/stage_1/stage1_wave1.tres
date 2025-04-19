@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="EnemySpawnerConfiguration" load_steps=5 format=3 uid="uid://bmus8vpwfawrd"]
+
+[ext_resource type="Script" path="res://Scripts/Battle/Enemy/Data/EnemyConfiguration.gd" id="1_m14gv"]
+[ext_resource type="Resource" uid="uid://6bcffrgrin1k" path="res://Authoring/Enemies/EnemyGoblin.tres" id="2_7fsoe"]
+[ext_resource type="Script" path="res://Scripts/Battle/Levels/Stages/EnemySpawnerConfiguration.gd" id="2_50vya"]
+[ext_resource type="Resource" uid="uid://vfswb3br8gf5" path="res://Authoring/Enemies/EnemyOrc.tres" id="3_e8x24"]
+
+[resource]
+script = ExtResource("2_50vya")
+laneIndex = 0
+delay = 0
+enemies = Array[ExtResource("1_m14gv")]([ExtResource("2_7fsoe"), ExtResource("3_e8x24")])

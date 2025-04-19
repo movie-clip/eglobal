@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="StageEnemySpawnerConfiguration" load_steps=4 format=3 uid="uid://jb8eanvewil8"]
+
+[ext_resource type="Script" path="res://Scripts/Battle/Levels/Stages/StageEnemySpawnerConfiguration.gd" id="1_0il3e"]
+[ext_resource type="Script" path="res://Scripts/Battle/Levels/Stages/EnemySpawnerConfiguration.gd" id="2_qjvsc"]
+[ext_resource type="Resource" uid="uid://bmus8vpwfawrd" path="res://Authoring/Levels/stage_1/stage1_wave1.tres" id="3_mgrft"]
+
+[resource]
+script = ExtResource("1_0il3e")
+spawners = Array[ExtResource("2_qjvsc")]([ExtResource("3_mgrft")])

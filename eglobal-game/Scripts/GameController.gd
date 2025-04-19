@@ -11,6 +11,9 @@ func _ready() -> void:
 	Global.game_controller = self
 	current_gui_scene = $GUILayer/GUI/Splash
 	
+func mock_player_data():
+	Global.playerService.create_player()
+	
 func change_gui_scene(new_scene: Util.GUI_SCENES, delete: bool = false, keep_running: bool = false) -> void:
 	transitionController.transition("fade out", 1)
 	transitionController.visible = true
