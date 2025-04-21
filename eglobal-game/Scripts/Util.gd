@@ -13,3 +13,5 @@ var BattleScene: String = "res://Scenes/Battle/battle_level.tscn"
 var MetaScene: String = "res://Scenes/Battle/battle_level.tscn"
 
 var BattleUIVictory: String = "res://Scenes/Battle/UI/BattleVictoryRoot.tscn"
+
+enum LEVEL_SUCCESS_CRITERIA {GetChest, KillEnemies}

@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="ProgressPointData" load_steps=6 format=3 uid="uid://cnep5rwjftybq"]
 
 [ext_resource type="Script" path="res://Scripts/Ui/Battle/Data/ProgressPointData.gd" id="1_db72w"]
-[ext_resource type="Texture2D" uid="uid://cieqdlrrh0mi0" path="res://Content/Atlases/ui_atlas.png" id="1_l3nr6"]
+[ext_resource type="Texture2D" uid="uid://cieqdlrrh0mi0" path="res://Content/atlases/ui_atlas.png" id="1_l3nr6"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sa5v2"]
 atlas = ExtResource("1_l3nr6")

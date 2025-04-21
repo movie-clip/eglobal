@@ -40,3 +40,9 @@ func activate_enemy_spawner():
 		context.params.append(enemy)
 		context.params.append(current_stage_scene.player_spawn_position)
 		command.execute(context, self)
+		
+func evaluate_rules() -> bool:
+	for rule in current_stage_config.stage_rules:
+		if !rule.check_success_criteria():
+			return false
+	return true

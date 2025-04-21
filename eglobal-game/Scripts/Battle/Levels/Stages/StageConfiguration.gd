@@ -5,3 +5,4 @@ class_name StageConfiguration
 @export var stage_scene: PackedScene
 
 @export var spawners: Array[StageEnemySpawnerConfiguration]
+@export var stage_rules: Array[LevelRuleConfig]

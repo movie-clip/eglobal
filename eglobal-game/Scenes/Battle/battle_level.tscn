@@ -1,14 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://dh4hvupdn14av"]
+[gd_scene load_steps=4 format=3 uid="uid://dh4hvupdn14av"]
 
 [ext_resource type="Script" path="res://Scripts/Battle/BattleController.gd" id="1_2e8vg"]
 [ext_resource type="Script" path="res://Scripts/Battle/Levels/LevelSceneController.gd" id="2_jiyf5"]
+[ext_resource type="PackedScene" uid="uid://cfrkf7tugbjxy" path="res://Scenes/Battle/Player/PlayerController.tscn" id="3_7rmrl"]
 
 [node name="BattlerController" type="Node2D" node_paths=PackedStringArray("level_controller")]
 script = ExtResource("1_2e8vg")
-level_controller = NodePath("LevelController")
+level_controller = NodePath("LevelSceneController")
 
-[node name="LevelController" type="Node2D" parent="." node_paths=PackedStringArray("level_container")]
+[node name="LevelSceneController" type="Node2D" parent="." node_paths=PackedStringArray("level_container")]
 script = ExtResource("2_jiyf5")
 level_container = NodePath("LevelContainer")
+player_scene = ExtResource("3_7rmrl")
 
-[node name="LevelContainer" type="Node2D" parent="LevelController"]
+[node name="LevelContainer" type="Node2D" parent="LevelSceneController"]

@@ -6,3 +6,5 @@ class_name LevelConfiguration
 @export var back: Texture2D
 
 @export var stages: Array[StageConfiguration] = []
+
+@export var rules: Array[LevelRuleConfig] = []

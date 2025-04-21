@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="ProgressPointData" load_steps=6 format=3 uid="uid://6cph642ulan"]
 
-[ext_resource type="Texture2D" uid="uid://cieqdlrrh0mi0" path="res://Content/Atlases/ui_atlas.png" id="1_gdu0v"]
+[ext_resource type="Texture2D" uid="uid://cieqdlrrh0mi0" path="res://Content/atlases/ui_atlas.png" id="1_gdu0v"]
 [ext_resource type="Script" path="res://Scripts/Ui/Battle/Data/ProgressPointData.gd" id="1_n83h4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tbb55"]
