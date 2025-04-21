@@ -9,6 +9,8 @@ extends Control
 @onready var PlayerExpProgressBar: TextureProgressBar = $MarginContainer/VBoxContainer/AllStatsPanel/AllStatsHBoxContainer/ExpStatPanel/TextureProgressBar
 @onready var PlayerExpTexture: TextureRect = $MarginContainer/VBoxContainer/AllStatsPanel/AllStatsHBoxContainer/ExpStatPanel/TextureRect
 
+@onready var EmptyViewControl: Control = $MarginContainer/VBoxContainer/EmptyViewControl
+
 func _ready() -> void:
 	LevelProgressBar.value = 0
 	PlayerHpProgressBar.max_value = Global.playerService.get_max_hp()
@@ -23,9 +25,17 @@ func _ready() -> void:
 	SignalBus.player_exp_changed.connect(change_exp_view)
 	SignalBus.player_level_changed.connect(change_lvl_view)
 	SignalBus.player_exp_for_next_level_changed.connect(change_exp_next_lvl_view)
+	SignalBus.open_close_inventory_stash.connect(change_emty_view_stretch_ratio)
 
 func _process(delta: float) -> void:
 	pass
+
+func change_emty_view_stretch_ratio(Value: bool):
+	var tween = get_tree().create_tween()
+	if Value == true:
+		tween.tween_property(EmptyViewControl, "size_flags_stretch_ratio", 0, 0.3)#.set_trans(Tween.TRANS_ELASTIC)
+	else:
+		tween.tween_property(EmptyViewControl, "size_flags_stretch_ratio", 1, 0.3)#.set_trans(Tween.TRANS_ELASTIC)
 
 func change_progress() -> void:
 	LevelProgressBar.value += 1

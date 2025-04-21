@@ -6,30 +6,43 @@ const  item_ui_prefab = preload("res://Scenes/Inventory/inventory_item_ui.tscn")
 @onready var open_chest_button: Button = $"../TetstPanelControl/HBoxContainer/TestButtonOpenShest"
 @onready var stash_button: Button = $"../TetstPanelControl/HBoxContainer/TestButtonStashOnOff"
 var is_stash_on: bool = false
+var default_stah_size: Vector2 = Vector2(360, 125)
 
 func _ready() -> void:
 	open_chest_button.pressed.connect(generate_items)
-	stash_button.pressed.connect(slider_change_animation)
+	stash_button.pressed.connect(test_close_stash)
 	SignalBus.remove_iten_in_stash.connect(remove_iten_in_stash)
+	self.custom_minimum_size = Vector2.ZERO
+	self.size = Vector2.ZERO
 	self.visible = false
 
-func slider_change_animation():
+func test_close_stash():
+	slider_change_animation(Vector2.ZERO, false)
+
+func slider_change_animation(StashSize: Vector2, IsOpen: bool):
+	SignalBus.open_close_inventory_stash.emit(IsOpen)
+	if is_stash_on == IsOpen:
+		return
+	if IsOpen == true:
+		self.visible = IsOpen
 	for stash_item in stash_container.get_children():
 		stash_item.free()
 	var tween = get_tree().create_tween()
 	tween.set_parallel()
-	tween.tween_property(self, "size", Vector2.ZERO, 1)
-	tween.tween_property(self, "custom_minimum_size", Vector2.ZERO, 1)
-	tween.tween_callback(set_stash_visible).set_delay(1)
+	tween.tween_property(self, "custom_minimum_size", StashSize, 0.1)#.set_trans(Tween.TRANS_ELASTIC)
+	tween.tween_property(self, "size", StashSize, 0.1)#.set_trans(Tween.TRANS_ELASTIC)
+	tween.tween_callback(set_stash_visible.bind(IsOpen)).set_delay(0.2)
 	#tween.chain().tween_property(_Texture, "scale", Vector2(1, 1), 0.1)
 
-func set_stash_visible():
-	self.visible = is_stash_on
+func set_stash_visible(IsOpen: bool):
+	self.visible = IsOpen
+	is_stash_on = IsOpen
 
 func _process(delta: float) -> void:
 	pass
 
 func generate_items():
+	slider_change_animation(default_stah_size, true)
 	for stash_item in stash_container.get_children():
 		stash_item.free()
 	#0-begin 4-center 8-end
@@ -78,7 +91,6 @@ func revert_item_parent(Item: Control):
 	SignalBus.to_free_inventory_slots.emit()
 
 func calculate_items_size():
-	self.visible = true
 	var items: Array = stash_container.get_children()
 	var last_item_size = items.back().size.x
 	var stash_width = stash_container.size.x

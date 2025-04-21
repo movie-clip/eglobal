@@ -30,8 +30,9 @@ anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -180.0
+offset_top = -5.0
 offset_right = 180.0
-offset_bottom = 415.0
+offset_bottom = 410.0
 grow_horizontal = 2
 theme_override_constants/separation = 0
 
@@ -190,12 +191,19 @@ theme_override_constants/separation = 2
 
 [node name="TestButtonUnlockFreeSlot" type="Button" parent="VBoxContainer/TetstPanelControl/HBoxContainer"]
 layout_mode = 2
-text = "Unlock slot"
+theme_override_font_sizes/font_size = 9
+text = "Unlock
+slot"
 
 [node name="TestButtonOpenShest" type="Button" parent="VBoxContainer/TetstPanelControl/HBoxContainer"]
 layout_mode = 2
-text = "Open chest"
+theme_override_font_sizes/font_size = 9
+text = "Open
+chest"
 
 [node name="TestButtonStashOnOff" type="Button" parent="VBoxContainer/TetstPanelControl/HBoxContainer"]
 layout_mode = 2
-text = "Stash"
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 9
+text = "Close
+stash"

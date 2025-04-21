@@ -1,0 +1,158 @@
+[gd_scene load_steps=7 format=3 uid="uid://c57tg6bxkkema"]
+
+[ext_resource type="Texture2D" uid="uid://dhfdpjkv2w4ux" path="res://Content/UiSprites/BattleUi/BattleUiBg/inventory_item_panel_bg_line.png" id="1_xnsc4"]
+[ext_resource type="Texture2D" uid="uid://p3o5am3r7xbi" path="res://Content/UiSprites/BattleUi/BattleUiBg/inventory_item_panel_bg.png" id="2_777y6"]
+[ext_resource type="Texture2D" uid="uid://dnfyor6h8rd82" path="res://Content/UiSprites/BattleUi/BattleUiBg/bubble_bg_flag_3.png" id="2_h2501"]
+[ext_resource type="Texture2D" uid="uid://dsh01aayy4ubu" path="res://Content/UiSprites/BattleUi/BattleUiBg/button_close.png" id="4_hw8vi"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_gwqtv"]
+font_size = 14
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_e5lww"]
+font_size = 12
+font_color = Color(0, 0.780392, 0.0666667, 1)
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
+
+[node name="ItemStatsPanelControl" type="Control"]
+custom_minimum_size = Vector2(360, 330)
+layout_mode = 3
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -180.0
+offset_top = -330.0
+offset_right = 180.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0235294, 0.0235294, 0.133333, 0.819608)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(0, 180)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="HeadControl" type="Control" parent="VBoxContainer"]
+z_index = 1
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="LineTextureRect" type="TextureRect" parent="VBoxContainer/HeadControl"]
+custom_minimum_size = Vector2(0, 4)
+layout_mode = 2
+offset_top = 50.0
+offset_right = 360.0
+offset_bottom = 54.0
+grow_horizontal = 2
+texture = ExtResource("1_xnsc4")
+expand_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HeadControl/LineTextureRect"]
+z_index = 1
+custom_minimum_size = Vector2(160, 46)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -80.0
+offset_top = -8.0
+offset_right = 80.0
+offset_bottom = 38.0
+grow_horizontal = 2
+texture = ExtResource("2_h2501")
+expand_mode = 1
+
+[node name="ItemNameLabel" type="Label" parent="VBoxContainer/HeadControl/LineTextureRect/TextureRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 8.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Angelic sword"
+label_settings = SubResource("LabelSettings_gwqtv")
+horizontal_alignment = 1
+
+[node name="EnchantCountLabel" type="Label" parent="VBoxContainer/HeadControl/LineTextureRect/TextureRect"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 23.0
+grow_horizontal = 0
+text = "+10"
+label_settings = SubResource("LabelSettings_e5lww")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CentralControl" type="Control" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 160)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/CentralControl"]
+custom_minimum_size = Vector2(0, 160)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_777y6")
+expand_mode = 1
+
+[node name="ItemStatControl" type="Control" parent="VBoxContainer/CentralControl"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LineTextureRect2" type="TextureRect" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 4)
+layout_mode = 2
+size_flags_vertical = 8
+texture = ExtResource("1_xnsc4")
+expand_mode = 1
+
+[node name="FooterControl" type="Control" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+
+[node name="CloseButton" type="TextureButton" parent="VBoxContainer/FooterControl"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -16.0
+offset_top = -32.0
+offset_right = 16.0
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = ExtResource("4_hw8vi")
+ignore_texture_size = true
+stretch_mode = 0

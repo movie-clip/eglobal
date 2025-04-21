@@ -308,10 +308,9 @@ custom_minimum_size = Vector2(5, 0)
 layout_mode = 2
 
 [node name="EmptyViewControl" type="Control" parent="MarginContainer/VBoxContainer"]
-custom_minimum_size = Vector2(360, 200)
+custom_minimum_size = Vector2(360, 100)
 layout_mode = 2
 size_flags_vertical = 3
-size_flags_stretch_ratio = 5.0
 
 [node name="AllStatsPanel" type="TextureRect" parent="MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(360, 40)
@@ -586,10 +585,9 @@ custom_minimum_size = Vector2(5, 0)
 layout_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer"]
-custom_minimum_size = Vector2(360, 360)
+custom_minimum_size = Vector2(360, 330)
 layout_mode = 2
-size_flags_vertical = 6
-size_flags_stretch_ratio = 13.98
+size_flags_vertical = 3
 texture = ExtResource("8_o204e")
 expand_mode = 1
 
