@@ -4,11 +4,11 @@ class_name InventoryUI
 var is_item_selected: bool = false
 var is_item_moved: bool = false
 var selected_item_control: Control
-@onready var inventory_controller: InventoryController = $InventoryController
+@onready var inventory_controller: InventoryController = $VBoxContainer/InventoryControl/InventoryController
 #@onready var stash_container: HBoxContainer = $InventoryStashUiRoot/HBoxContainer/HBoxContainer
-@onready var items_container: Control = $ItemsContainer
+@onready var items_container: Control = $VBoxContainer/InventoryControl/InventoryController/ItemsContainer
 #For tests
-@onready var TestButtonUnlockFreeSlot = $TestButtonUnlockFreeSlot
+@onready var TestButtonUnlockFreeSlot = $VBoxContainer/TetstPanelControl/HBoxContainer/TestButtonUnlockFreeSlot
 var is_drag_item: bool = false
 var is_drag_on_slot: bool = false
 #var last_clot: Control

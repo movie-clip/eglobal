@@ -1,13 +1,30 @@
 class_name InventoryStashController extends Control
 
-const  item_ui_prefab = preload("res://Scenes/Inventory/crossbow_inventory_item_ui.tscn")
+const  item_ui_prefab = preload("res://Scenes/Inventory/inventory_item_ui.tscn")
 @onready var stash_container: HBoxContainer = $HBoxContainer/HBoxContainer
 #For tests
-@onready var open_chest_button: Button = $"../TestButtonOpenShest"
+@onready var open_chest_button: Button = $"../TetstPanelControl/HBoxContainer/TestButtonOpenShest"
+@onready var stash_button: Button = $"../TetstPanelControl/HBoxContainer/TestButtonStashOnOff"
+var is_stash_on: bool = false
 
 func _ready() -> void:
 	open_chest_button.pressed.connect(generate_items)
+	stash_button.pressed.connect(slider_change_animation)
 	SignalBus.remove_iten_in_stash.connect(remove_iten_in_stash)
+	self.visible = false
+
+func slider_change_animation():
+	for stash_item in stash_container.get_children():
+		stash_item.free()
+	var tween = get_tree().create_tween()
+	tween.set_parallel()
+	tween.tween_property(self, "size", Vector2.ZERO, 1)
+	tween.tween_property(self, "custom_minimum_size", Vector2.ZERO, 1)
+	tween.tween_callback(set_stash_visible).set_delay(1)
+	#tween.chain().tween_property(_Texture, "scale", Vector2(1, 1), 0.1)
+
+func set_stash_visible():
+	self.visible = is_stash_on
 
 func _process(delta: float) -> void:
 	pass
@@ -61,6 +78,7 @@ func revert_item_parent(Item: Control):
 	SignalBus.to_free_inventory_slots.emit()
 
 func calculate_items_size():
+	self.visible = true
 	var items: Array = stash_container.get_children()
 	var last_item_size = items.back().size.x
 	var stash_width = stash_container.size.x

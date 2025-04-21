@@ -9,6 +9,7 @@ var inventoryDataProvider: InventoryDataProvider
 
 func _ready() -> void:
 	playerService = PlayerService.new()
+	playerService.create_player()
 	
 	inventoryService = InventoryService.new()
 	inventoryService.init()

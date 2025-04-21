@@ -16,5 +16,5 @@ func on_click():
 	Global.on_level_stage_complited()
 	var Damage: int = randi_range(-100, -300)
 	var Exp: int = randi_range(10, 600)
-	Global.on_player_hp_changed(Damage)
-	Global.on_player_exp_changed(Exp)
+	Global.playerService.change_player_hp(Damage) #on_player_hp_changed(Damage)
+	Global.playerService.change_player_exp(Exp) #on_player_exp_changed(Exp)

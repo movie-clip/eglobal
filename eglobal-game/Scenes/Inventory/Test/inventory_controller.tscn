@@ -1,7 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://cec268i2biilc"]
-
-[ext_resource type="PackedScene" uid="uid://bj5b1fcseb785" path="res://Scenes/Inventory/InventoryUiRoot.tscn" id="2_csx0v"]
-
-[node name="InventoryController" type="Node"]
-
-[node name="InventoryUiRoot" parent="." instance=ExtResource("2_csx0v")]
