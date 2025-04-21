@@ -35,4 +35,4 @@ color = Color(1, 1, 1, 0.0823529)
 position = Vector2(341, 19)
 
 [node name="PlayerSpawn" type="Marker2D" parent="."]
-position = Vector2(28, 186)
+position = Vector2(31, 169)

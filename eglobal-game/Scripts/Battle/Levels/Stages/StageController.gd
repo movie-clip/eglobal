@@ -10,7 +10,7 @@ var player_spawn_position: Vector2 = Vector2.ZERO
 func _ready() -> void:
 	_collect_level_configuration()
 	
-func get_spawn_position(lane_index: int) -> float:
+func get_spawn_position(lane_index: int) -> Vector2:
 	return lanes_config[lane_index]["spawn_pos"]
 	
 func _collect_level_configuration():

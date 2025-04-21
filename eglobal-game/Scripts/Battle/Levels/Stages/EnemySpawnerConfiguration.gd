@@ -3,4 +3,4 @@ class_name EnemySpawnerConfiguration
 
 @export var laneIndex: int
 @export var delay: int
-@export var enemies: Array[EnemyConfiguration]
+@export var enemies: Array[EnemyConfig]

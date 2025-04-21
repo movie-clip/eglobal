@@ -1,5 +1,5 @@
-extends Resource
-class_name EnemyConfiguration
+extends Spawnable
+class_name EnemyConfig
 
 @export var name: String
 @export var health: int
@@ -7,4 +7,3 @@ class_name EnemyConfiguration
 @export var fire_rate: float
 @export var attack_range: float
 @export var movement_speed: float
-@export var texture: Texture2D

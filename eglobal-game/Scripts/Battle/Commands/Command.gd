@@ -1,5 +1,5 @@
 extends Object
 class_name Command
 
-func execute(data: Object):
+func execute(context: CommandParam, parent: Node2D):
 	pass

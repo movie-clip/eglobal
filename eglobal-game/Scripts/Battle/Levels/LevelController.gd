@@ -22,19 +22,21 @@ func activate_enemy_spawner():
 	
 	var spawner = current_stage_config.spawners[0]
 	var wave = spawner.get_wave(0)
+	var spawn_position = current_stage_scene.get_spawn_position(wave.laneIndex)
+	
+	var enemies: Array[EnemyController] = []
+	
 	for enemy in wave.enemies:
-		spawn_enemy_in_lane(enemy, wave.laneIndex)
-	
-	
-func spawn_enemy_in_lane(enemy_data: EnemyConfiguration, lane_index: int) -> void:
-	
-	var spawn_position = current_stage_scene.get_spawn_position(lane_index)
-
-	var enemy_scene = preload("res://Scenes/Battle/enemy.tscn")
-	var enemy: EnemyController = enemy_scene.instantiate()
-	enemy.data = enemy_data
-	enemy.attack_target_x = 400.0
-	enemy.global_position = spawn_position
-	
-	add_child(enemy)
-	
+		var command = SpawnEnemyCommand.new()
+		var context = CommandParam.new()
+		context.params.append(enemy)
+		context.params.append(spawn_position)
+		command.execute(context, self)
+		enemies.append(command.result)
+		
+	for enemy in enemies:
+		var command = MoveCommand.new()
+		var context = CommandParam.new()
+		context.params.append(enemy)
+		context.params.append(current_stage_scene.player_spawn_position)
+		command.execute(context, self)

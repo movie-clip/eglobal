@@ -1,14 +1,16 @@
-[gd_resource type="Resource" script_class="EnemyData" load_steps=3 format=3 uid="uid://6bcffrgrin1k"]
+[gd_resource type="Resource" script_class="EnemyConfiguration" load_steps=4 format=3 uid="uid://6bcffrgrin1k"]
 
-[ext_resource type="Script" path="res://Scripts/Battle/Enemy/Data/EnemyConfiguration.gd" id="1_wtpfv"]
+[ext_resource type="PackedScene" uid="uid://du8i1x2i577rd" path="res://Scenes/Battle/enemy.tscn" id="1_ey5d2"]
 [ext_resource type="Texture2D" uid="uid://cixf0sdnygy4g" path="res://Content/ArielDress [Paint].png" id="2_1o1y4"]
+[ext_resource type="Script" path="res://Scripts/Battle/Enemy/Data/EnemyConfiguration.gd" id="2_bvori"]
 
 [resource]
-script = ExtResource("1_wtpfv")
+script = ExtResource("2_bvori")
 name = "goblin"
 health = 50
 attack_power = 5
 fire_rate = 2.0
 attack_range = 60.0
 movement_speed = 80.0
+scene = ExtResource("1_ey5d2")
 texture = ExtResource("2_1o1y4")

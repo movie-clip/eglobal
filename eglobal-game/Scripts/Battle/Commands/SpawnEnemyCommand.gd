@@ -1,15 +1,13 @@
 extends Command
 class_name SpawnEnemyCommand
 
-class SpawnData:
-	var entityID: int
-	var position: Vector2
+var result: Object
+
+func execute(context: CommandParam, parent: Node2D):
+	var config = context.params[0] as EnemyConfig
+	var spawn_position = context.params[1]
 	
-	func init(id:int, pos:Vector2):
-		entityID = id
-		position = pos
-		
-func execute(data: Object):
-	if data is SpawnData:
-		pass
-	pass
+	result = config.get_scene().instantiate()
+	result.data = config
+	result.global_position = spawn_position
+	parent.add_child(result)
