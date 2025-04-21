@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="InventoryItemViewModel" load_steps=4 format=3 uid="uid://uu1v83uoub4g"]
+
+[ext_resource type="Script" path="res://Scripts/Inventory/Data/InventoryItemViewModel.gd" id="1_bw4ks"]
+[ext_resource type="Resource" uid="uid://cuyujyd8hikb" path="res://Authoring/Inventory/Shapes/2x2_shape.tres" id="2_v3ihb"]
+[ext_resource type="Texture2D" uid="uid://dqap8nknapc66" path="res://Content/UiSprites/ItemsSprites/mallet/mallet_1.png" id="3_6ebse"]
+
+[resource]
+script = ExtResource("1_bw4ks")
+itemType = 16
+itemLevel = 1
+itemName = "Mallet"
+texture = ExtResource("3_6ebse")
+shape = ExtResource("2_v3ihb")

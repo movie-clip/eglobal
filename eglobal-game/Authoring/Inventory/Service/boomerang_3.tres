@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="InventoryItemViewModel" load_steps=4 format=3 uid="uid://d0rofiiqe0hu1"]
+
+[ext_resource type="Script" path="res://Scripts/Inventory/Data/InventoryItemViewModel.gd" id="1_khrj0"]
+[ext_resource type="Resource" uid="uid://cox7mgma2pg27" path="res://Authoring/Inventory/Shapes/2x2_L_shape.tres" id="2_mqsxb"]
+[ext_resource type="Texture2D" uid="uid://cpomfmkhdg3ls" path="res://Content/UiSprites/ItemsSprites/boomerang/boomerang_3.png" id="3_4v8h7"]
+
+[resource]
+script = ExtResource("1_khrj0")
+itemType = 3
+itemLevel = 3
+itemName = "Boomerang"
+texture = ExtResource("3_4v8h7")
+shape = ExtResource("2_mqsxb")

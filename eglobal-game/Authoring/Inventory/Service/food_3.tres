@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="InventoryItemViewModel" load_steps=4 format=3 uid="uid://bhqgwpaxbgqiy"]
+
+[ext_resource type="Script" path="res://Scripts/Inventory/Data/InventoryItemViewModel.gd" id="1_drlv3"]
+[ext_resource type="Resource" uid="uid://hf0vs5hjifef" path="res://Authoring/Inventory/Shapes/1x1_shape.tres" id="2_kw5xa"]
+[ext_resource type="Texture2D" uid="uid://cox0fp26uu5ve" path="res://Content/UiSprites/ItemsSprites/food/food_3.png" id="3_ghnne"]
+
+[resource]
+script = ExtResource("1_drlv3")
+itemType = 10
+itemLevel = 3
+itemName = "Food"
+texture = ExtResource("3_ghnne")
+shape = ExtResource("2_kw5xa")

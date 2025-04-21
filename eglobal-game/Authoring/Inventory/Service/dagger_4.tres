@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="InventoryItemViewModel" load_steps=4 format=3 uid="uid://kol1x42s7kcf"]
+
+[ext_resource type="Script" path="res://Scripts/Inventory/Data/InventoryItemViewModel.gd" id="1_upk0a"]
+[ext_resource type="Resource" uid="uid://dqjfidea18k0u" path="res://Authoring/Inventory/Shapes/2x1_shape.tres" id="2_56exn"]
+[ext_resource type="Texture2D" uid="uid://c3cpt73gxjeif" path="res://Content/UiSprites/ItemsSprites/dagger/dagger_4.png" id="3_yfiec"]
+
+[resource]
+script = ExtResource("1_upk0a")
+itemType = 5
+itemLevel = 4
+itemName = "Dagger"
+texture = ExtResource("3_yfiec")
+shape = ExtResource("2_56exn")

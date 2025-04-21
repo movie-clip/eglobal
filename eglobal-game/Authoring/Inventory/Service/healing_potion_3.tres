@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="InventoryItemViewModel" load_steps=4 format=3 uid="uid://dwtnhx1i1q0iw"]
+
+[ext_resource type="Script" path="res://Scripts/Inventory/Data/InventoryItemViewModel.gd" id="1_hw4dq"]
+[ext_resource type="Resource" uid="uid://hf0vs5hjifef" path="res://Authoring/Inventory/Shapes/1x1_shape.tres" id="2_wwtim"]
+[ext_resource type="Texture2D" uid="uid://gsfv4481seq6" path="res://Content/UiSprites/ItemsSprites/healingPotion/healingPotion_3.png" id="3_1uw7s"]
+
+[resource]
+script = ExtResource("1_hw4dq")
+itemType = 14
+itemLevel = 3
+itemName = "Healing Potion"
+texture = ExtResource("3_1uw7s")
+shape = ExtResource("2_wwtim")

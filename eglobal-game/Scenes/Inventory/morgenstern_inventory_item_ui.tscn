@@ -1,8 +1,6 @@
-[gd_scene load_steps=12 format=3 uid="uid://cwamgth0jrtya"]
+[gd_scene load_steps=10 format=3 uid="uid://cwamgth0jrtya"]
 
 [ext_resource type="Script" path="res://Scripts/Inventory/GUI/InventoryItemUi.gd" id="1_vrfop"]
-[ext_resource type="Resource" uid="uid://c8wmhetxeu56l" path="res://Authoring/Inventory/Items/morgenstern_item.tres" id="2_ibd4u"]
-[ext_resource type="Resource" uid="uid://chded3xusm361" path="res://Authoring/Inventory/Shapes/morgenstern_shape.tres" id="3_e1s2y"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f2g86"]
 size = Vector2(31, 32)
@@ -28,7 +26,7 @@ size = Vector2(31, 32)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6a3uo"]
 size = Vector2(31, 32)
 
-[node name="InventoryItemUi" type="Control" node_paths=PackedStringArray("item_areas", "colored_slots")]
+[node name="InventoryItemUi" type="Control"]
 z_index = 1
 custom_minimum_size = Vector2(122, 122)
 layout_mode = 3
@@ -36,12 +34,7 @@ anchors_preset = 0
 offset_right = 38.0
 offset_bottom = 38.0
 script = ExtResource("1_vrfop")
-itemData = ExtResource("2_ibd4u")
-itemShape = ExtResource("3_e1s2y")
 base_areas = [[NodePath("ItemArea2D1"), NodePath("ItemArea2D2"), NodePath("ItemArea2D3")], [NodePath("ItemArea2D4"), NodePath("ItemArea2D5"), NodePath("ItemArea2D6")], [NodePath("ItemArea2D7"), NodePath("ItemArea2D8"), NodePath("ItemArea2D9")]]
-base_colored_slots = [[NodePath("ItemColorRect1"), NodePath("ItemColorRect2"), NodePath("ItemColorRect3")], [NodePath("ItemColorRect4"), NodePath("ItemColorRect5"), NodePath("ItemColorRect6")], [NodePath("ItemColorRect7"), NodePath("ItemColorRect8"), NodePath("ItemColorRect9")]]
-item_areas = [NodePath("ItemArea2D1"), NodePath("ItemArea2D2"), NodePath("ItemArea2D3"), NodePath("ItemArea2D4"), NodePath("ItemArea2D5"), NodePath("ItemArea2D6"), NodePath("ItemArea2D7"), NodePath("ItemArea2D8"), NodePath("ItemArea2D9")]
-colored_slots = [NodePath("ItemColorRect1"), NodePath("ItemColorRect2"), NodePath("ItemColorRect3"), NodePath("ItemColorRect4"), NodePath("ItemColorRect5"), NodePath("ItemColorRect6"), NodePath("ItemColorRect7"), NodePath("ItemColorRect8"), NodePath("ItemColorRect9")]
 
 [node name="ItemTextureRect" type="TextureRect" parent="."]
 custom_minimum_size = Vector2(122, 122)

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="InventoryItemViewModel" load_steps=4 format=3 uid="uid://breup322yuj54"]
+
+[ext_resource type="Script" path="res://Scripts/Inventory/Data/InventoryItemViewModel.gd" id="1_4ugx0"]
+[ext_resource type="Resource" uid="uid://hf0vs5hjifef" path="res://Authoring/Inventory/Shapes/1x1_shape.tres" id="2_5mwy6"]
+[ext_resource type="Texture2D" uid="uid://bix5wlpv24h5b" path="res://Content/UiSprites/ItemsSprites/freezeBomb/freezeBomb_5.png" id="3_7mfd5"]
+
+[resource]
+script = ExtResource("1_4ugx0")
+itemType = 11
+itemLevel = 5
+itemName = "Freeze Bomb"
+texture = ExtResource("3_7mfd5")
+shape = ExtResource("2_5mwy6")

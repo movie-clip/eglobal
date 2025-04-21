@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="InventoryItemViewModel" load_steps=4 format=3 uid="uid://c8jrldmei5p42"]
+
+[ext_resource type="Script" path="res://Scripts/Inventory/Data/InventoryItemViewModel.gd" id="1_vwka7"]
+[ext_resource type="Resource" uid="uid://hf0vs5hjifef" path="res://Authoring/Inventory/Shapes/1x1_shape.tres" id="2_j5b13"]
+[ext_resource type="Texture2D" uid="uid://cbuutrg547824" path="res://Content/UiSprites/ItemsSprites/dart/dart_4.png" id="3_rwarn"]
+
+[resource]
+script = ExtResource("1_vwka7")
+itemType = 6
+itemLevel = 4
+itemName = "Dart"
+texture = ExtResource("3_rwarn")
+shape = ExtResource("2_j5b13")

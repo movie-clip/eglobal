@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="InventoryShape" load_steps=2 format=3 uid="uid://caaigsiebniof"]
+
+[ext_resource type="Script" path="res://Scripts/Inventory/Controllers/InventoryShape.gd" id="1_megao"]
+
+[resource]
+script = ExtResource("1_megao")
+width = 3
+height = 1
+origin_pos = Vector2(-1, -1)

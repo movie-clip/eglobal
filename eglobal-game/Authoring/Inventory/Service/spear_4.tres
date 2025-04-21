@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="InventoryItemViewModel" load_steps=4 format=3 uid="uid://by3ty8614odkb"]
+
+[ext_resource type="Script" path="res://Scripts/Inventory/Data/InventoryItemViewModel.gd" id="1_5ubw8"]
+[ext_resource type="Resource" uid="uid://caaigsiebniof" path="res://Authoring/Inventory/Shapes/3x1_shape.tres" id="2_cotpe"]
+[ext_resource type="Texture2D" uid="uid://8idgit1y14cb" path="res://Content/UiSprites/ItemsSprites/spear/spear_4.png" id="3_88426"]
+
+[resource]
+script = ExtResource("1_5ubw8")
+itemType = 24
+itemLevel = 4
+itemName = "Spear"
+texture = ExtResource("3_88426")
+shape = ExtResource("2_cotpe")

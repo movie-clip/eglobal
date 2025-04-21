@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://c585getwe5jkw"]
 
 [ext_resource type="Script" path="res://Scripts/Ui/Battle/RewardItemControl.gd" id="1_6ju6x"]
-[ext_resource type="Texture2D" uid="uid://bpx1g514wd5wo" path="res://Content/atlases/ui_atlas_2.png" id="2_fsfp0"]
+[ext_resource type="Texture2D" uid="uid://bpx1g514wd5wo" path="res://Content/Atlases/ui_atlas_2.png" id="2_fsfp0"]
 [ext_resource type="Texture2D" uid="uid://ykuw36u3wwnl" path="res://Content/UiSprites/ItemsSprites/icon_equip_ring_gold.png" id="3_ls0f2"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h1uop"]

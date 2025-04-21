@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="InventoryItemViewModel" load_steps=4 format=3 uid="uid://cotmo0j5rmfc7"]
+
+[ext_resource type="Script" path="res://Scripts/Inventory/Data/InventoryItemViewModel.gd" id="1_a0ewe"]
+[ext_resource type="Resource" uid="uid://cuyujyd8hikb" path="res://Authoring/Inventory/Shapes/2x2_shape.tres" id="2_obsxs"]
+[ext_resource type="Texture2D" uid="uid://dgf26klx4fc7c" path="res://Content/UiSprites/ItemsSprites/shield/shield_5.png" id="3_32gcy"]
+
+[resource]
+script = ExtResource("1_a0ewe")
+itemType = 22
+itemLevel = 5
+itemName = "Shield"
+texture = ExtResource("3_32gcy")
+shape = ExtResource("2_obsxs")
