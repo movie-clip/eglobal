@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="InventoryItemViewModel" load_steps=4 format=3 uid="uid://c7iq2dxq0ryfj"]
+
+[ext_resource type="Script" path="res://Scripts/Inventory/Data/InventoryItemViewModel.gd" id="1_vo3qb"]
+[ext_resource type="Resource" uid="uid://hf0vs5hjifef" path="res://Authoring/Inventory/Shapes/1x1_shape.tres" id="2_xvo0p"]
+[ext_resource type="Texture2D" uid="uid://2fjpsbbdyxiw" path="res://Content/UiSprites/ItemsSprites/speedRune/speedRune_4.png" id="3_pkgmi"]
+
+[resource]
+script = ExtResource("1_vo3qb")
+itemType = 25
+itemLevel = 4
+itemName = "Speed Rune"
+texture = ExtResource("3_pkgmi")
+shape = ExtResource("2_xvo0p")

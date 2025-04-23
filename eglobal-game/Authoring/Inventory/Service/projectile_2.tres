@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="InventoryItemViewModel" load_steps=4 format=3 uid="uid://b6m0211e1y5uu"]
+
+[ext_resource type="Script" path="res://Scripts/Inventory/Data/InventoryItemViewModel.gd" id="1_erb5h"]
+[ext_resource type="Resource" uid="uid://hf0vs5hjifef" path="res://Authoring/Inventory/Shapes/1x1_shape.tres" id="2_k2mvo"]
+[ext_resource type="Texture2D" uid="uid://pe1yi2x87ujq" path="res://Content/UiSprites/ItemsSprites/projectile/projectile_2.png" id="3_vm6v6"]
+
+[resource]
+script = ExtResource("1_erb5h")
+itemType = 19
+itemLevel = 2
+itemName = "Projectile"
+texture = ExtResource("3_vm6v6")
+shape = ExtResource("2_k2mvo")

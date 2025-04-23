@@ -1,7 +1,7 @@
 extends Panel
 class_name LevelProgressPanel
 
-const  item_scene = preload("res://Scenes/progress_point_control.tscn")
+const  item_scene = preload("res://Scenes/Battle/UI/ProgressPointControl.tscn")
 @onready var container: Control = $PointsControl
 
 func _ready() -> void:

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="InventoryItemViewModel" load_steps=4 format=3 uid="uid://qle3lcd5o3qg"]
+
+[ext_resource type="Script" path="res://Scripts/Inventory/Data/InventoryItemViewModel.gd" id="1_lqgjl"]
+[ext_resource type="Resource" uid="uid://hf0vs5hjifef" path="res://Authoring/Inventory/Shapes/1x1_shape.tres" id="2_q38sp"]
+[ext_resource type="Texture2D" uid="uid://chdiqqkmeqqy8" path="res://Content/UiSprites/ItemsSprites/shuriken/shuriken_2.png" id="3_y82mj"]
+
+[resource]
+script = ExtResource("1_lqgjl")
+itemType = 23
+itemLevel = 2
+itemName = "Shuriken"
+texture = ExtResource("3_y82mj")
+shape = ExtResource("2_q38sp")

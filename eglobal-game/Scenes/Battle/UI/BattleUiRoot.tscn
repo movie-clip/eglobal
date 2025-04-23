@@ -1,11 +1,10 @@
-[gd_scene load_steps=36 format=3 uid="uid://dxj68qfu7tivi"]
+[gd_scene load_steps=35 format=3 uid="uid://dxj68qfu7tivi"]
 
 [ext_resource type="Script" path="res://Scripts/Ui/Battle/BattleUiRoot.gd" id="1_q3g5q"]
 [ext_resource type="Texture2D" uid="uid://ontpj8xlcqua" path="res://Content/UiSprites/BattleUi/BattleUiBg/panel_head_bg.png" id="2_elen3"]
 [ext_resource type="Texture2D" uid="uid://cvb4bslapob57" path="res://Content/UiSprites/BattleUi/BattleUiBg/panel_head_progress_bg.png" id="4_uo3tk"]
 [ext_resource type="Texture2D" uid="uid://dno543ass0lkt" path="res://Content/UiSprites/BattleUi/BattleUiBg/panel_stats_bg.png" id="5_6au8l"]
 [ext_resource type="Script" path="res://Scripts/Ui/Battle/LevelProgressPanel.gd" id="5_cjwqj"]
-[ext_resource type="Script" path="res://Scripts/Ui/Battle/AllStatsPanel.gd" id="5_skxg0"]
 [ext_resource type="Script" path="res://Scripts/Ui/Battle/BattleButton.gd" id="6_iouhy"]
 [ext_resource type="Texture2D" uid="uid://cieqdlrrh0mi0" path="res://Content/atlases/ui_atlas.png" id="7_s40um"]
 [ext_resource type="Texture2D" uid="uid://q83taaml8mvr" path="res://Content/UiSprites/BattleUi/BattleUiBg/inventory_bg.png" id="8_o204e"]
@@ -309,17 +308,15 @@ custom_minimum_size = Vector2(5, 0)
 layout_mode = 2
 
 [node name="EmptyViewControl" type="Control" parent="MarginContainer/VBoxContainer"]
-custom_minimum_size = Vector2(360, 200)
+custom_minimum_size = Vector2(360, 100)
 layout_mode = 2
 size_flags_vertical = 3
-size_flags_stretch_ratio = 5.0
 
 [node name="AllStatsPanel" type="TextureRect" parent="MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(360, 40)
 layout_mode = 2
 texture = ExtResource("5_6au8l")
 expand_mode = 1
-script = ExtResource("5_skxg0")
 
 [node name="AllStatsHBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/AllStatsPanel"]
 custom_minimum_size = Vector2(360, 40)
@@ -588,10 +585,9 @@ custom_minimum_size = Vector2(5, 0)
 layout_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer"]
-custom_minimum_size = Vector2(360, 360)
+custom_minimum_size = Vector2(360, 330)
 layout_mode = 2
-size_flags_vertical = 6
-size_flags_stretch_ratio = 13.98
+size_flags_vertical = 3
 texture = ExtResource("8_o204e")
 expand_mode = 1
 

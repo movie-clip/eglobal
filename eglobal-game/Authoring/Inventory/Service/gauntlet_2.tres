@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="InventoryItemViewModel" load_steps=4 format=3 uid="uid://bik4ma5j860qe"]
+
+[ext_resource type="Script" path="res://Scripts/Inventory/Data/InventoryItemViewModel.gd" id="1_uym4y"]
+[ext_resource type="Resource" uid="uid://hf0vs5hjifef" path="res://Authoring/Inventory/Shapes/1x1_shape.tres" id="2_py1lf"]
+[ext_resource type="Texture2D" uid="uid://cclg3gaaat1p" path="res://Content/UiSprites/ItemsSprites/gauntlet/gauntlet_2.png" id="3_fwrdq"]
+
+[resource]
+script = ExtResource("1_uym4y")
+itemType = 12
+itemLevel = 2
+itemName = "Gauntlet"
+texture = ExtResource("3_fwrdq")
+shape = ExtResource("2_py1lf")

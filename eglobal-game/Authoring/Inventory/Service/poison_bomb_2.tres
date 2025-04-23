@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="InventoryItemViewModel" load_steps=4 format=3 uid="uid://n4t2lohb6fyo"]
+
+[ext_resource type="Script" path="res://Scripts/Inventory/Data/InventoryItemViewModel.gd" id="1_x40dn"]
+[ext_resource type="Resource" uid="uid://hf0vs5hjifef" path="res://Authoring/Inventory/Shapes/1x1_shape.tres" id="2_anu5d"]
+[ext_resource type="Texture2D" uid="uid://c36xt3fmdhtxw" path="res://Content/UiSprites/ItemsSprites/poisonBomb/poisonBomb_2.png" id="3_ali32"]
+
+[resource]
+script = ExtResource("1_x40dn")
+itemType = 17
+itemLevel = 2
+itemName = "Poison Bomb"
+texture = ExtResource("3_ali32")
+shape = ExtResource("2_anu5d")

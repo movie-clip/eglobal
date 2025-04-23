@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="InventoryItemViewModel" load_steps=4 format=3 uid="uid://c7vaype4ykyyb"]
+
+[ext_resource type="Script" path="res://Scripts/Inventory/Data/InventoryItemViewModel.gd" id="1_3gd2b"]
+[ext_resource type="Resource" uid="uid://cgppimo0lueio" path="res://Authoring/Inventory/Shapes/2x2_R_shape.tres" id="2_nbhhg"]
+[ext_resource type="Texture2D" uid="uid://c5h8yy3oi36xd" path="res://Content/UiSprites/ItemsSprites/axe/axe_4.png" id="3_y0x7x"]
+
+[resource]
+script = ExtResource("1_3gd2b")
+itemType = 2
+itemLevel = 4
+itemName = "Axe"
+texture = ExtResource("3_y0x7x")
+shape = ExtResource("2_nbhhg")

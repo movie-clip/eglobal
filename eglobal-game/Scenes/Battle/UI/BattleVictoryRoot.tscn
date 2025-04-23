@@ -7,10 +7,10 @@
 [ext_resource type="Texture2D" uid="uid://bfeg8u6r3054p" path="res://Content/UiSprites/BattleUi/BattleUiBg/effect_ellipse_1.png" id="4_okv6f"]
 [ext_resource type="Texture2D" uid="uid://bn2idhqs3fbl5" path="res://Content/UiSprites/BattleUi/VictoryLoseIcons/icon_wings_left.png" id="5_g4n6u"]
 [ext_resource type="Texture2D" uid="uid://crmt2f7fkwqy" path="res://Content/UiSprites/BattleUi/BattleUiBg/bubble_bg_2.png" id="5_imdhg"]
-[ext_resource type="Texture2D" uid="uid://bpx1g514wd5wo" path="res://Content/atlases/ui_atlas_2.png" id="5_wyhel"]
+[ext_resource type="Texture2D" uid="uid://bpx1g514wd5wo" path="res://Content/Atlases/ui_atlas_2.png" id="5_wyhel"]
 [ext_resource type="Texture2D" uid="uid://c6eur3g5advme" path="res://Content/UiSprites/BattleUi/BattleUiBg/bubble_bg_flag_2.png" id="6_024wx"]
 [ext_resource type="Texture2D" uid="uid://cab4p2oub8w0n" path="res://Content/UiSprites/BattleUi/VictoryLoseIcons/icon_wings_right.png" id="6_tk11a"]
-[ext_resource type="Texture2D" uid="uid://cieqdlrrh0mi0" path="res://Content/atlases/ui_atlas.png" id="7_6t6qe"]
+[ext_resource type="Texture2D" uid="uid://cieqdlrrh0mi0" path="res://Content/Atlases/ui_atlas.png" id="7_6t6qe"]
 [ext_resource type="Script" path="res://Scripts/Ui/Battle/BattleRewardPanel.gd" id="7_dlopm"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_1s6vn"]
@@ -20,11 +20,11 @@ outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gdonl"]
 atlas = ExtResource("5_wyhel")
-region = Rect2(545, 4, 439, 358)
+region = Rect2(453, 4, 439, 358)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6vhg5"]
 atlas = ExtResource("5_wyhel")
-region = Rect2(624, 372, 162, 392)
+region = Rect2(176, 372, 162, 392)
 
 [sub_resource type="LabelSettings" id="LabelSettings_4ctr2"]
 font_size = 14

@@ -11,6 +11,7 @@ var levelDataProvider: LevelDataProvider
 
 func _ready() -> void:
 	playerService = PlayerService.new()
+	playerService.create_player()
 	
 	inventoryService = InventoryService.new()
 	inventoryService.init()

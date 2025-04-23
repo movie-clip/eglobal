@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="InventoryItemViewModel" load_steps=4 format=3 uid="uid://bkow5o5ywgnnf"]
+
+[ext_resource type="Script" path="res://Scripts/Inventory/Data/InventoryItemViewModel.gd" id="1_12d0j"]
+[ext_resource type="Resource" uid="uid://hf0vs5hjifef" path="res://Authoring/Inventory/Shapes/1x1_shape.tres" id="2_1enk0"]
+[ext_resource type="Texture2D" uid="uid://dbbtrc0urapaf" path="res://Content/UiSprites/ItemsSprites/drink/drink_3.png" id="3_8rlm3"]
+
+[resource]
+script = ExtResource("1_12d0j")
+itemType = 7
+itemLevel = 3
+itemName = "Drink"
+texture = ExtResource("3_8rlm3")
+shape = ExtResource("2_1enk0")

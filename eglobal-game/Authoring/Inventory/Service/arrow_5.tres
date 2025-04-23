@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="InventoryItemViewModel" load_steps=4 format=3 uid="uid://co8f278qxff4g"]
+
+[ext_resource type="Script" path="res://Scripts/Inventory/Data/InventoryItemViewModel.gd" id="1_b164w"]
+[ext_resource type="Resource" uid="uid://dqjfidea18k0u" path="res://Authoring/Inventory/Shapes/2x1_shape.tres" id="2_grbdh"]
+[ext_resource type="Texture2D" uid="uid://v7duxrclb1df" path="res://Content/UiSprites/ItemsSprites/arrow/arrow_5.png" id="3_cqcla"]
+
+[resource]
+script = ExtResource("1_b164w")
+itemType = 1
+itemLevel = 5
+itemName = "Arrow"
+texture = ExtResource("3_cqcla")
+shape = ExtResource("2_grbdh")

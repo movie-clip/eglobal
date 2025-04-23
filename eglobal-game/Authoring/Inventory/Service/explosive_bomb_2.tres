@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="InventoryItemViewModel" load_steps=4 format=3 uid="uid://cxd0fnhxp4bor"]
+
+[ext_resource type="Script" path="res://Scripts/Inventory/Data/InventoryItemViewModel.gd" id="1_43cw7"]
+[ext_resource type="Resource" uid="uid://hf0vs5hjifef" path="res://Authoring/Inventory/Shapes/1x1_shape.tres" id="2_hjcp8"]
+[ext_resource type="Texture2D" uid="uid://bel5mjhrkhfis" path="res://Content/UiSprites/ItemsSprites/explosiveBomb/explosiveBomb_2.png" id="3_th27n"]
+
+[resource]
+script = ExtResource("1_43cw7")
+itemType = 8
+itemLevel = 2
+itemName = "Explosive Bomb"
+texture = ExtResource("3_th27n")
+shape = ExtResource("2_hjcp8")

@@ -1,7 +1,7 @@
 extends TextureRect
 class_name BattleRewardPanel
 
-const  item_scene = preload("res://Scenes/RewardItemControl.tscn")
+const  item_scene = preload("res://Scenes/Battle/UI/RewardItemControl.tscn")
 @onready var container: GridContainer = $HBoxContainer/GridContainer
 
 func _ready() -> void:

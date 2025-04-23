@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="InventoryItemViewModel" load_steps=4 format=3 uid="uid://cfs6bfaf1exhf"]
+
+[ext_resource type="Script" path="res://Scripts/Inventory/Data/InventoryItemViewModel.gd" id="1_l8b5r"]
+[ext_resource type="Resource" uid="uid://hf0vs5hjifef" path="res://Authoring/Inventory/Shapes/1x1_shape.tres" id="2_1py84"]
+[ext_resource type="Texture2D" uid="uid://rn6flu7enob5" path="res://Content/UiSprites/ItemsSprites/pouch/pouch_2.png" id="3_u3axl"]
+
+[resource]
+script = ExtResource("1_l8b5r")
+itemType = 18
+itemLevel = 2
+itemName = "Pouch"
+texture = ExtResource("3_u3axl")
+shape = ExtResource("2_1py84")

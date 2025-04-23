@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="InventoryItemViewModel" load_steps=4 format=3 uid="uid://c67x0jo5lkp0n"]
+
+[ext_resource type="Script" path="res://Scripts/Inventory/Data/InventoryItemViewModel.gd" id="1_hts7x"]
+[ext_resource type="Resource" uid="uid://chded3xusm361" path="res://Authoring/Inventory/Shapes/1x3_shape.tres" id="2_d62mv"]
+[ext_resource type="Texture2D" uid="uid://dbmncqfp16kd" path="res://Content/UiSprites/ItemsSprites/mace/mace_5.png" id="3_amtts"]
+
+[resource]
+script = ExtResource("1_hts7x")
+itemType = 15
+itemLevel = 5
+itemName = "Mace"
+texture = ExtResource("3_amtts")
+shape = ExtResource("2_d62mv")

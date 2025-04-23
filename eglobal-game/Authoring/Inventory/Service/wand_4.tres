@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="InventoryItemViewModel" load_steps=4 format=3 uid="uid://clen4kyqu1rrg"]
+
+[ext_resource type="Script" path="res://Scripts/Inventory/Data/InventoryItemViewModel.gd" id="1_dkt4w"]
+[ext_resource type="Resource" uid="uid://dqjfidea18k0u" path="res://Authoring/Inventory/Shapes/2x1_shape.tres" id="2_pfwrq"]
+[ext_resource type="Texture2D" uid="uid://d1shyx03m5n58" path="res://Content/UiSprites/ItemsSprites/wand/wand_4.png" id="3_55q5a"]
+
+[resource]
+script = ExtResource("1_dkt4w")
+itemType = 26
+itemLevel = 4
+itemName = "Wand"
+texture = ExtResource("3_55q5a")
+shape = ExtResource("2_pfwrq")

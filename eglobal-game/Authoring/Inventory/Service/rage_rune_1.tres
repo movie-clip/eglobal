@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="InventoryItemViewModel" load_steps=4 format=3 uid="uid://c2yt4rspakbce"]
+
+[ext_resource type="Script" path="res://Scripts/Inventory/Data/InventoryItemViewModel.gd" id="1_amos7"]
+[ext_resource type="Resource" uid="uid://hf0vs5hjifef" path="res://Authoring/Inventory/Shapes/1x1_shape.tres" id="2_xln1o"]
+[ext_resource type="Texture2D" uid="uid://cbtmggivtka7n" path="res://Content/UiSprites/ItemsSprites/rageRune/rageRune_1.png" id="3_sskkb"]
+
+[resource]
+script = ExtResource("1_amos7")
+itemType = 20
+itemLevel = 1
+itemName = "Rage Rune"
+texture = ExtResource("3_sskkb")
+shape = ExtResource("2_xln1o")
