@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="ChestConfig" load_steps=3 format=3 uid="uid://djdo2ldboum4v"]
+
+[ext_resource type="PackedScene" uid="uid://h5v6sk0qnsx3" path="res://Scenes/Battle/chest.tscn" id="1_18vpa"]
+[ext_resource type="Script" path="res://Scripts/Battle/Chest/ChestConfig.gd" id="1_dmqkt"]
+
+[resource]
+script = ExtResource("1_dmqkt")
+scene = ExtResource("1_18vpa")

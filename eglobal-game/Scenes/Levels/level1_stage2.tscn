@@ -1,9 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://ckqmhtho8pqf1"]
+[gd_scene load_steps=2 format=3 uid="uid://days4dgcfags0"]
 
-[ext_resource type="Script" path="res://Scripts/Battle/Levels/Stages/StageController.gd" id="1_336ta"]
+[ext_resource type="Script" path="res://Scripts/Battle/Levels/Stages/StageController.gd" id="1_2581n"]
 
 [node name="Stage" type="Node2D"]
-script = ExtResource("1_336ta")
+script = ExtResource("1_2581n")
 
 [node name="Lanes" type="Node2D" parent="."]
 

@@ -1,10 +1,17 @@
-[gd_scene load_steps=3 format=3 uid="uid://cfrkf7tugbjxy"]
+[gd_scene load_steps=4 format=3 uid="uid://cfrkf7tugbjxy"]
 
 [ext_resource type="Texture2D" uid="uid://gfdqk80j8yoc" path="res://Content/BerserkArmor.png" id="1_3foi7"]
 [ext_resource type="Script" path="res://Scripts/Player/PlayerController.gd" id="1_xrkxl"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3b17i"]
+size = Vector2(37, 32)
+
 [node name="PlayerController" type="CharacterBody2D"]
 script = ExtResource("1_xrkxl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2.5, 0)
+shape = SubResource("RectangleShape2D_3b17i")
 
 [node name="Panel" type="Panel" parent="."]
 self_modulate = Color(1, 1, 1, 0)

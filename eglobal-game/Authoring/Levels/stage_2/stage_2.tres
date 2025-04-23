@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="StageConfiguration" load_steps=6 format=3 uid="uid://cig45vkklb315"]
+
+[ext_resource type="Script" path="res://Scripts/Battle/Levels/Stages/StageConfiguration.gd" id="1_aumpy"]
+[ext_resource type="Script" path="res://Scripts/Battle/Levels/Stages/StageEnemySpawnerConfiguration.gd" id="2_xjau0"]
+[ext_resource type="Resource" uid="uid://df42yjx1xg2v0" path="res://Authoring/Levels/stage_2/stage2_spawner.tres" id="3_0370l"]
+[ext_resource type="Script" path="res://Scripts/Battle/Levels/Rules/LevelRuleConfig.gd" id="4_kac0j"]
+[ext_resource type="PackedScene" uid="uid://days4dgcfags0" path="res://Scenes/Levels/level1_stage2.tscn" id="5_gvwr0"]
+
+[resource]
+script = ExtResource("1_aumpy")
+stage_id = 0
+stage_scene = ExtResource("5_gvwr0")
+spawners = Array[ExtResource("2_xjau0")]([ExtResource("3_0370l")])
+stage_rules = Array[ExtResource("4_kac0j")]([])

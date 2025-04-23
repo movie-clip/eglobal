@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="EnemySpawnerConfiguration" load_steps=4 format=3 uid="uid://bmus8vpwfawrd"]
+
+[ext_resource type="Script" path="res://Scripts/Battle/Spawnable.gd" id="1_odlcq"]
+[ext_resource type="Resource" uid="uid://csu7n24imccdn" path="res://Authoring/Enemies/orc.tres" id="2_kvwnq"]
+[ext_resource type="Script" path="res://Scripts/Battle/Levels/Stages/EntitySpawnerConfig.gd" id="3_yx4o4"]
+
+[resource]
+script = ExtResource("3_yx4o4")
+laneIndex = 0
+delay = 0
+entities = Array[ExtResource("1_odlcq")]([ExtResource("2_kvwnq")])

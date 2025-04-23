@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://ckqmhtho8pqf1"]
+
+[ext_resource type="Script" path="res://Scripts/Battle/Levels/Stages/StageController.gd" id="1_qs32r"]
+
+[node name="Stage" type="Node2D"]
+script = ExtResource("1_qs32r")
+
+[node name="Lanes" type="Node2D" parent="."]
+
+[node name="Lane0" type="ColorRect" parent="Lanes"]
+offset_top = 100.0
+offset_right = 360.0
+offset_bottom = 140.0
+color = Color(1, 1, 1, 0.0823529)
+
+[node name="EnemySpawnerMarker" type="Marker2D" parent="Lanes/Lane0"]
+position = Vector2(116, 22)
+
+[node name="PlayerSpawn" type="Marker2D" parent="."]
+position = Vector2(28, 122)

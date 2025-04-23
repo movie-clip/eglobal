@@ -15,6 +15,7 @@ func _physics_process(delta: float) -> void:
 	else:
 		movement_velocity.x = 0
 		isMoving = false
+		SignalBus.player_move_finished.emit()
 	
 	velocity = movement_velocity
 	move_and_slide()

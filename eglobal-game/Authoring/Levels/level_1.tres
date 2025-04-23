@@ -1,14 +1,17 @@
-[gd_resource type="Resource" script_class="LevelConfiguration" load_steps=6 format=3 uid="uid://ddqk7ppwhrob"]
+[gd_resource type="Resource" script_class="LevelConfiguration" load_steps=8 format=3 uid="uid://ddqk7ppwhrob"]
 
 [ext_resource type="Texture2D" uid="uid://ceiakx0cem0pv" path="res://Content/Background/bg_kamenka.png" id="1_c2rb1"]
 [ext_resource type="PackedScene" uid="uid://cx2c47773mw32" path="res://Scenes/Levels/level_1.tscn" id="1_m64fk"]
 [ext_resource type="Script" path="res://Scripts/Battle/Levels/LevelConfiguration.gd" id="2_ppju6"]
+[ext_resource type="Script" path="res://Scripts/Battle/Levels/Rules/LevelRuleConfig.gd" id="3_xusio"]
 [ext_resource type="Script" path="res://Scripts/Battle/Levels/Stages/StageConfiguration.gd" id="4_ap2bu"]
 [ext_resource type="Resource" uid="uid://bciyjxkub0gan" path="res://Authoring/Levels/stage_1/stage_1.tres" id="5_jaob1"]
+[ext_resource type="Resource" uid="uid://cig45vkklb315" path="res://Authoring/Levels/stage_2/stage_2.tres" id="7_iooe4"]
 
 [resource]
 script = ExtResource("2_ppju6")
 id = 0
 level_scene = ExtResource("1_m64fk")
 back = ExtResource("1_c2rb1")
-stages = Array[ExtResource("4_ap2bu")]([ExtResource("5_jaob1")])
+stages = Array[ExtResource("4_ap2bu")]([ExtResource("5_jaob1"), ExtResource("7_iooe4")])
+rules = Array[ExtResource("3_xusio")]([])
